@@ -1,0 +1,59 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}cc{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block metas %}
+    {{ super() }}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="renderer" content="webkit" />
+
+    <meta name="keywords" content="cc"/>
+    <meta name="description" content="cc"/>
+{#    <link rel='canonical' href='//www.xx12757052.icoc.me/col.jsp?id=112'>#}
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link type="text/css" href="{{ url_for('static', filename='css/app.css', _external=True) }}" rel="stylesheet">
+    {#<link type="text/css" href="{{ url_for('static', filename='css/base2.min.css', _external=True) }}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/fkTheme.min.css', _external=True) }}" rel="stylesheet" id="jzThemeFrame"/>
+    <link type="text/css" href="{{ url_for('static', filename='css/moduleAnimation.min.css', _external=True) }}" rel="stylesheet" />
+
+	<link id="sysnavlink" type="text/css" href="{{ url_for('.static', filename='css/fkNav.min.css', _external=True) }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='css/newSearchBoxStyle.min.css', _external=True) }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='css/floatBtn1.min.css', _external=True) }}" rel="stylesheet">
+
+    <link type="text/css" href="{{ url_for('static', filename='css/poshytipAndmCustomScrollbar.min.css', _external=True) }}" rel="stylesheet">#}
+{#	<link type="text/css" href="jzcusstyle.jsp?colId=2&extId=0&_csw=0" rel="stylesheet">#}
+{% endblock %}
+
+{% block navbar %}
+    <div id="header-div" class="container" style="height: 120px">
+        <img id="header-logo"
+             src="{{ url_for('static', filename='media/header-logo.png') }}" alt="header logo"
+             style="margin-top: 0px; margin-left: 0px; height: 77px;">
+        <div class="navbar">
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="page_header">
+            <h1>Hello, Dave!</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
