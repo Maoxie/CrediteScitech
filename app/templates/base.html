@@ -18,6 +18,8 @@
     <meta name="keywords" content="cc"/>
     <meta name="description" content="cc"/>
 {#    <link rel='canonical' href='//www.xx12757052.icoc.me/col.jsp?id=112'>#}
+    <link type="image/x-icon" href="{{ url_for('static', filename='media/favicon.ico') }}" rel="icon"/>
+    <link href="{{ url_for('.static', filename='media/favicon.ico', _external=True) }}" rel="shortcut icon"/>
 {% endblock %}
 
 {% block styles %}
@@ -36,22 +38,57 @@
 {% endblock %}
 
 {% block navbar %}
-    <div id="header-div" class="container" style="height: 120px">
-        <img id="header-logo"
-             src="{{ url_for('static', filename='media/header-logo.png') }}" alt="header logo"
-             style="margin-top: 0px; margin-left: 0px; height: 77px;">
-        <div class="navbar">
-
+    <div class="container" id="header-div">
+        <img id="header-logo" src="{{ url_for('static', filename='media/header-logo.png') }}" alt="header logo">
+        <div id="header-slogan">
+            <div class="row"><span class="slogan">专注科技翻译</span></div>
+            <div class="row"><span class="slogan">用翻译提升学术价值</span></div>
+        </div>
+        <div id="header-phone">
+            <img src="{{ url_for('static', filename='media/phone-icon.png') }}">
+            <span class="phone-number">400-658-2018 | 010-5178-9898</span>
+        </div>
+    </div>
+    <div class="container-fluid" id="header-navibar" role="navigation">
+        <div class="row item-container">
+            <div class="col-xs-2">
+                <p class="text-center navbar-item active">网站首页</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center navbar-item">翻译领域</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center navbar-item">服务产品</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center navbar-item">质量控制</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center navbar-item">案例简介</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center navbar-item">关于我们</p>
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="page_header">
-            <h1>Hello, Dave!</h1>
+    {% block detail %}
+        <div class="container">
+            <div class="page_header">
+                <h1>Hello, Dave!</h1>
+            </div>
         </div>
-    </div>
+    {% endblock %}
+
+    {% block footer %}
+        <footer class="footer navbar-fixed-bottom ">
+            <div class="container">
+                <h1>Hello, Dave!</h1>
+            </div>
+        </footer>
+    {% endblock %}
 {% endblock %}
 
 {% block scripts %}
