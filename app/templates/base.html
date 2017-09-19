@@ -18,56 +18,211 @@
     <meta name="keywords" content="cc"/>
     <meta name="description" content="cc"/>
 {#    <link rel='canonical' href='//www.xx12757052.icoc.me/col.jsp?id=112'>#}
-    <link type="image/x-icon" href="{{ url_for('static', filename='media/favicon.ico') }}" rel="icon"/>
-    <link href="{{ url_for('.static', filename='media/favicon.ico', _external=True) }}" rel="shortcut icon"/>
+    <link type="image/x-icon" href="{{ url_for('static', filename='media/base/favicon.ico') }}" rel="icon"/>
+    <link href="{{ url_for('.static', filename='media/base/favicon.ico', _external=True) }}" rel="shortcut icon"/>
 {% endblock %}
 
 {% block styles %}
     {{ super() }}
     <link type="text/css" href="{{ url_for('static', filename='css/app.css', _external=True) }}" rel="stylesheet">
-    {#<link type="text/css" href="{{ url_for('static', filename='css/base2.min.css', _external=True) }}" rel="stylesheet" />
-    <link type="text/css" href="{{ url_for('static', filename='css/fkTheme.min.css', _external=True) }}" rel="stylesheet" id="jzThemeFrame"/>
-    <link type="text/css" href="{{ url_for('static', filename='css/moduleAnimation.min.css', _external=True) }}" rel="stylesheet" />
-
-	<link id="sysnavlink" type="text/css" href="{{ url_for('.static', filename='css/fkNav.min.css', _external=True) }}" rel="stylesheet">
-    <link type="text/css" href="{{ url_for('static', filename='css/newSearchBoxStyle.min.css', _external=True) }}" rel="stylesheet">
-    <link type="text/css" href="{{ url_for('static', filename='css/floatBtn1.min.css', _external=True) }}" rel="stylesheet">
-
-    <link type="text/css" href="{{ url_for('static', filename='css/poshytipAndmCustomScrollbar.min.css', _external=True) }}" rel="stylesheet">#}
-{#	<link type="text/css" href="jzcusstyle.jsp?colId=2&extId=0&_csw=0" rel="stylesheet">#}
 {% endblock %}
 
 {% block navbar %}
     <div class="container" id="header-div">
-        <img id="header-logo" src="{{ url_for('static', filename='media/header-logo.png') }}" alt="header logo">
+        <img id="header-logo" src="{{ url_for('static', filename='media/base/header-logo.png') }}" alt="header logo">
         <div id="header-slogan">
             <div class="row"><span class="slogan">专注科技翻译</span></div>
             <div class="row"><span class="slogan">用翻译提升学术价值</span></div>
         </div>
         <div id="header-phone">
-            <img src="{{ url_for('static', filename='media/phone-icon.png') }}">
+            <img src="{{ url_for('static', filename='media/base/phone-icon.png') }}">
             <span class="phone-number">400-658-2018 | 010-5178-9898</span>
         </div>
     </div>
     <div class="container-fluid" id="header-navibar" role="navigation">
         <div class="row item-container">
             <div class="col-xs-2">
-                <p class="text-center navbar-item active">网站首页</p>
+                <div class="navbar-item">
+                    <a href="">
+                        <div class="text-center navbar-button active">网站首页</div>
+                    </a>
+                </div>
             </div>
             <div class="col-xs-2">
-                <p class="text-center navbar-item">翻译领域</p>
+                <div class="navbar-item">
+                    <div class="text-center navbar-button">翻译领域</div>
+                    <div class="navbar-menu">
+                        <div class="row">
+                            <div class="col-xs-4 menu-col">
+                                <div style="margin-left: 120px;">
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>医学医药
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>机械电子
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>物理数学
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>环境工程
+                                        </a>
+                                    </p>
+                                </div>
+                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            </div>
+                            <div class="col-xs-4 menu-col">
+                                <div style="margin-left: 120px;">
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>核能核电
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>化学化工
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>信息技术
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>生命科学
+                                        </a>
+                                    </p>
+                                </div>
+                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            </div>
+                            <div class="col-xs-4 menu-col">
+                                <img src="{{ url_for('static', filename='media/base/in-narbar-menu-1.jpg') }}"
+                                     style="height: 207px; margin-left: 30px; margin-top: 7px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-2">
-                <p class="text-center navbar-item">服务产品</p>
+                <div class="navbar-item">
+                    <div class="text-center navbar-button">服务产品</div>
+                    <div class="navbar-menu">
+                        <div class="row">
+                            <div class="col-xs-4 menu-col">
+                                <div style="margin-left: 120px;">
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>科技文献翻译
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>专利文件翻译
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>技术标书翻译
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>工程图纸翻译
+                                        </a>
+                                    </p>
+                                </div>
+                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            </div>
+                            <div class="col-xs-4 menu-col">
+                                <div style="margin-left: 120px;">
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>英语论文翻译
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>英语论文润色
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>论文专业排版
+                                        </a>
+                                    </p>
+                                    <p style="line-height: 56px; margin-bottom: auto;">
+                                        <a href="">
+                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>科技论文修图
+                                        </a>
+                                    </p>
+                                </div>
+                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            </div>
+                            <div class="col-xs-4 menu-col">
+                                <img src="{{ url_for('static', filename='media/base/in-narbar-menu-2.jpg') }}"
+                                     style="height: 207px; margin-left: 80px; margin-top: 7px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-2">
-                <p class="text-center navbar-item">质量控制</p>
+                <div class="navbar-item">
+                    <a href="">
+                        <div class="text-center navbar-button">质量控制</div>
+                    </a>
+                </div>
             </div>
             <div class="col-xs-2">
-                <p class="text-center navbar-item">案例简介</p>
+                <div class="navbar-item">
+                    <div class="text-center navbar-button">案例简介</div>
+                    <div class="navbar-menu">
+                        <div class="row">
+                            <div class="col-xs-4 menu-col">
+                                <div style="margin-left: 40px;">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='media/base/in-narbar-menu-3.jpg') }}"
+                                             style="height: 158px; width: 253px; margin-top: 7px;">
+                                        <p class="text-center" style="margin-top: 21px;">科技文献翻译案例</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 menu-col">
+                                <div style="margin-left: 40px;">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='media/base/in-narbar-menu-4.jpg') }}"
+                                             style="height: 158px; width: 253px; margin-top: 7px;">
+                                        <p class="text-center" style="margin-top: 21px;">英语论文翻译案例</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 menu-col">
+                                <div style="margin-left: 40px;">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='media/base/in-narbar-menu-5.png') }}"
+                                             style="height: 158px; width: 253px; margin-top: 7px;">
+                                        <p class="text-center" style="margin-top: 21px;">技术标书翻译案例</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-2">
-                <p class="text-center navbar-item">关于我们</p>
+                <div class="navbar-item">
+                    <a href="">
+                        <div class="text-center navbar-button">关于我们</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -83,14 +238,36 @@
     {% endblock %}
 
     {% block footer %}
-        <footer class="footer navbar-fixed-bottom ">
+        <div id="footer">
             <div class="container">
-                <h1>Hello, Dave!</h1>
+                <div style="height: 66px; width: 100%"></div>
+                <img src="{{ url_for('static', filename='media/base/in-footer-1.png') }}">
+                <p class="text-center" style="font-size: 16px; color: #a6a6a6">
+                    <a href="">医学医药</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">机械电子</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">数学物理</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">化学化工</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">生命科学</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">核能核电</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">信息技术</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="">环境工程‍</a>
+                </p>
+                <div style="height: 52px; width: 100%"></div>
+                <p class="text-center">
+                    <span style="color:#C40000;font-size:38px;">启信科技</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color:#CCCCCC;font-family:'Times New Roman';font-size:38px;">Credite Scitech</span>
+                </p>
+                <div style="height: 54px; width: 100%"></div>
+                <p class="text-center" style="font-size: 14px; color: #a6a6a6">
+                    电话：400-658-2018 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;邮箱：caiyubin2017@icloud.com &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 地址：北京市海淀区知春路111号理想大厦1904室
+                </p>
+                <div style="height: 38px; width: 100%"></div>
             </div>
-        </footer>
+        </div>
     {% endblock %}
 {% endblock %}
 
 {% block scripts %}
     {{ super() }}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
 {% endblock %}

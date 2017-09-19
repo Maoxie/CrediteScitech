@@ -13,5 +13,14 @@ from .. import db
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
+    organization_logos = [
+        url_for('static', filename='media/index/in-index-org-1.png', _external=True),
+        url_for('static', filename='media/index/in-index-org-2.jpg', _external=True),
+        url_for('static', filename='media/index/in-index-org-3.jpg', _external=True),
+        url_for('static', filename='media/index/in-index-org-4.png', _external=True),
+        url_for('static', filename='media/index/in-index-org-5.jpg', _external=True),
+        url_for('static', filename='media/index/in-index-org-6.png', _external=True),
+        url_for('static', filename='media/index/in-index-org-7.png', _external=True)
+    ]
     return render_template('index.html',
-                           name="Maoxie")
+                           name="Maoxie", org_logos=organization_logos)

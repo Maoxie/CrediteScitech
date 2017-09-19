@@ -1,9 +1,306 @@
 {% extends "base.html" %}
 
+{% block styles %}
+    {{ super() }}
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css', _external=True) }}" rel="stylesheet">
+{% endblock %}
+
 {% block detail %}
-<div class="container">
-    <div class="page_header">
-        <h1>Hello, {{ name }}!</h1>
-    </div>
+<div id="index-contents">
+    <section class="container-fluid" id="carousel">
+        <div id="carousel-pictures">
+            <div class="carousel-picture pic-1">
+                <div class="content-inner text-center">
+                    <div class="p1">
+                        WHY ME<span style="font-family: Tahoma, Microsoft YaHei; font-size: 76px;">&nbsp;?</span>
+                    </div>
+                    <img class="img1" src="{{ url_for('static', filename='media/index/in-carousel-1.png', _external=True) }}">
+                    <div>
+                        <div style="position: absolute; top: 322px; left: 235px;">
+                            <div class="in-carousel-rectangle-head yellow-transparent-bk">1</div>
+                        </div>
+                        <div style="position: absolute; top: 324px; left: 284px;">
+                            <div class="in-carousel-rectangle-banner"><p>135名清华硕博，专业匹配</p></div>
+                        </div>
+                        <div style="position: absolute; top: 322px; left: 624px;">
+                            <div class="in-carousel-rectangle-head yellow-transparent-bk">2</div>
+                        </div>
+                        <div style="position: absolute; top: 324px; left: 673px;">
+                            <div class="in-carousel-rectangle-banner"><p>5轮严格翻译、校审、排版流程</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="position: absolute; top: 383px; left: 235px;">
+                            <div class="in-carousel-rectangle-head yellow-transparent-bk">3</div>
+                        </div>
+                        <div style="position: absolute; top: 385px; left: 284px;">
+                            <div class="in-carousel-rectangle-banner"><p>覆盖8大领域，100+细分学科</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="position: absolute; top: 383px; left: 624px;">
+                            <div class="in-carousel-rectangle-head yellow-transparent-bk">4</div>
+                        </div>
+                        <div style="position: absolute; top: 385px; left: 673px;">
+                            <div class="in-carousel-rectangle-banner"><p>100%品质保障，免费返修</p></div>
+                        </div>
+                    </div>
+                    <div class="in-carousel-buttons">
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                            免费试译
+                        </a>
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                            首单七折
+                        </a>
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                            交稿付费
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-picture pic-2">
+                <div class="content-inner text-center">
+                    <img class="img1" src="{{ url_for('static', filename='media/index/in-carousel-2.png', _external=True) }}">
+                    <div class="p1 text-center">
+                        <strong>——</strong> 全程服务为学术精英开启走向世界的大门 <strong>——</strong>
+                    </div>
+                    <div class="p2 text-center">
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                            即刻开启
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots-container">
+            <var id="carousel-total" hidden="hidden">2</var>
+            <var id="carousel-current" hidden="hidden">1</var>
+            <div class="carousel-dot active" id="carousel-switch-1" onclick="CarouselSwitch(1)"></div>
+            <div class="carousel-dot" id="carousel-switch-2" onclick="CarouselSwitch(2)"></div>
+        </div>
+    </section>
+    <section class="container-fluid" id="index-content-1">
+        <div class="content-inner">
+            <div class="paragraph-1">
+                <div style="height: 31px;">
+                    <div class="in-content-title">我们为您提供最专业的科技翻译</div>
+                </div>
+                <div style="height: 35px; margin-top: 3px">
+                    <div class="in-content-subtitle">OUR SERVICE</div>
+                </div>
+                <div style="height: 70px;">
+                    <div class="p1">启信科技是由清华人创建的专业科技翻译公司，我们整合清华大学强大的人才资源，特聘外籍语言专家顾问，并将他们与灵活稳健的管理体系相融合，打造业内最顶级的科技翻译公司，提供最专业的科技翻译服务</div>
+                </div>
+            </div>
+            <div class="block-1">
+                <a href="">
+                    <div class="content-1-logo logo-1"></div>
+                    <div class="in-content-1-block">
+                        <div class="block-title">科技文献翻译</div>
+                        <div class="block-body">提供教材、专著、技术说明书、会议报告等各类科技文献中外互译。清华硕博为主的专业人才翻译，外加英语专业译者审校，团队合作，专业高效</div>
+                    </div>
+                </a>
+            </div>
+            <div class="block-2">
+                <a href="">
+                    <div class="content-1-logo logo-2"></div>
+                    <div class="in-content-1-block">
+                        <div class="block-title">英语论文翻译</div>
+                        <div class="block-body">100%对应学科清华博士翻译；外籍专家深度润色；多轮质控，100%品质保障；免费提供专业排版；365天无限次免费返修</div>
+                    </div>
+                </a>
+            </div>
+            <div class="block-3">
+                <a href="">
+                    <div class="content-1-logo logo-3"></div>
+                    <div class="in-content-1-block">
+                        <div class="block-title">技术标书翻译</div>
+                        <div class="block-body">由项目经理统筹技术标书翻译，一对一了解客户需求，实时反馈翻译进度；术语统筹，专业排版，交叉校对；翻译优质高效，周译字量超过50万</div>
+                    </div>
+                </a>
+            </div>
+            <div class="block-4">
+                <a href="">
+                    <div class="content-1-logo logo-4"><img src="{{ url_for('static', filename='media/index/in-content-1-4.png') }}"></div>
+                    <div class="in-content-1-block">
+                        <div class="block-title">专利文件翻译</div>
+                        <div class="block-body">启信科技与知识产权代理服务公司长期合作，提供最专业规范的专利文件翻译服务，呈现多语种专利文件中外互译</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="index-content-2">
+        <div class="content-inner">
+            <div class="title-container text-right">
+                <h1 class="in-content-title">专业优势</h1>
+                <p class="in-content-subtitle">ADVANTAGES IN SPECILIZATION</p>
+            </div>
+            <table class="content-table">
+                <thead>
+                <tr>
+                    <th class="left-col">启信科技</th>
+                    <th class="center-col"></th>
+                    <th class="right-col">通用翻译公司</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr style="height: 22px"></tr>
+                <tr>
+                    <td class="left-col">专门科技数据库，收录中外文献超10万篇</td>
+                    <td class="center-col"><div class="in-center-col-block text-center yellow-bk">数据库</div></td>
+                    <td class="right-col">无专门数据库</td>
+                </tr>
+                <tr>
+                    <td class="left-col">背靠清华，科技人才丰富</td>
+                    <td class="center-col"><div class="in-center-col-block text-center yellow-bk">人才库</div></td>
+                    <td class="right-col">专者不多</td>
+                </tr>
+                <tr>
+                    <td class="left-col">翻译团队硕博学历占65%</td>
+                    <td class="center-col"><div class="in-center-col-block text-center yellow-bk">专业性</div></td>
+                    <td class="right-col">多者不专</td>
+                </tr>
+                <tr>
+                    <td class="left-col">覆盖八大领域，超过100个细分学科</td>
+                    <td class="center-col"><div class="in-center-col-block text-center yellow-bk">全面性</div></td>
+                    <td class="right-col">找不到对口专业人才</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="container-fluid" id="index-content-3">
+        <div class="content-inner">
+            <div class="paragraph-1">
+                <div class="in-content-title">学科领域</div>
+                <div class="in-content-subtitle">FACULTIES</div>
+                <div class="p1">我们的服务领域以理工科为主，涵盖医学医药、机械电子、物理数学、化学化工、环境工程、核能核电、信息技术、生命科学等八大领域</div>
+            </div>
+            <div class="pictures">
+                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-1.jpg') }}"></div>
+                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-2.jpg') }}"></div>
+                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-3.jpg') }}"></div>
+                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-4.jpg') }}"></div>
+                <div class="picture-container big"><img src="{{ url_for('static', filename='media/index/in-content-3-5.jpg') }}"></div>
+                <div class="picture-container big"><img src="{{ url_for('static', filename='media/index/in-content-3-6.jpg') }}"></div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="index-content-4">
+        <div class="content-inner">
+            <div class="passage-1">
+                <div class = "title">
+                    <p>用翻译提升学术价值</p>
+                    <p>为您提供一站式科技翻译服务！</p>
+                </div>
+                <br />
+                <div class = "text">
+                    <p>启信科技通过长期研究客户需求制定出科技翻译整合解决方案，提供从语言翻译、母语润色、专业排版到修图美化的一站式服务。</p>
+                    <p>用全国最顶尖的学术人才外加国内外语言专家，实现科技文献在多种语言间的完美转换，打破语言障碍，播撒知识火种。</p>
+                    <p>我们的愿景是：提供最专业的科技翻译服务！</p>
+                    <p>我们的动力是：用翻译提升学术价值！</p>
+                </div>
+            </div>
+            <div class="passage-2">
+                <div class="blocks">
+                    <div class="block block-1">
+                        <div class="block-logo">
+                            <img src="{{ url_for('static', filename='media/index/in-content-4-1.png') }}">
+                        </div>
+                        <div class="text">
+                            <div class="block-title">精确匹配译者</div>
+                            <div class="block-passage">确定文件专业领域后，我们会在译者库中精确匹配对应专业的译者，最高可选择博士研究生</div>
+                        </div>
+                    </div>
+                    <div class="block block-2">
+                        <div class="block-logo">
+                            <img src="{{ url_for('static', filename='media/index/in-content-4-2.png') }}">
+                        </div>
+                        <div class="text">
+                            <div class="block-title">钻石级润色质量</div>
+                            <div class="block-passage">百分百由母语专家组成专业编辑团队，深度润色，修正语法与专业错误，纠正Chinglish表达</div>
+                        </div>
+                    </div>
+                    <div class="block block-3">
+                        <div class="block-logo">
+                            <img src="{{ url_for('static', filename='media/index/in-content-4-3.png') }}">
+                        </div>
+                        <div class="text">
+                            <div class="block-title">规范的保密体系</div>
+                            <div class="block-passage">原文交给我们之前我们会要求客户删除关键数据和图表，我们与译者之间更会签订保密协议，百分百杜绝泄密</div>
+                        </div>
+                    </div>
+                    <div class="block block-4">
+                        <div class="block-logo">
+                            <img src="{{ url_for('static', filename='media/index/in-content-4-4.png') }}">
+                        </div>
+                        <div class="text">
+                            <div class="block-title">百分百免费售后</div>
+                            <div class="block-passage">论文交付前随时与客户保持沟通，了解并反馈客户不同的需求，交付后，百分百免费返修</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="index-content-5">
+        <div class="content-inner">
+            <div class="title-block text-center">
+                <div class="in-content-title">案例简介</div>
+                <div class="in-content-subtitle">CASES</div>
+            </div>
+            <div class="blocks">
+                <div class="block text-center">
+                    <a href="">
+                        <img src="{{ url_for('static', filename='media/index/in-content-5-1.jpg') }}">
+                        <div class="text">
+                            <div class="title">题为《藕状结构多孔介质特征分析》的SCI论文翻译</div>
+                            <div class="seperator-line">—————————————————————</div>
+                            <div class="passage">此论文为某高效博士生的第二篇SCI论文，论文最终在世界排名第一的金属材料期刊上发表.....</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="block text-center">
+                    <a href="">
+                        <img src="{{ url_for('static', filename='media/index/in-content-5-2.jpg') }}">
+                        <div class="text">
+                            <div class="title">题为《藕状结构多孔介质特征分析》的SCI论文翻译</div>
+                            <div class="seperator-line">—————————————————————</div>
+                            <div class="passage">此论文为某高效博士生的第二篇SCI论文，论文最终在世界排名第一的金属材料期刊上发表.....</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="block text-center">
+                    <a href="">
+                        <img src="{{ url_for('static', filename='media/index/in-content-5-3.jpg') }}">
+                        <div class="text">
+                            <div class="title">题为《藕状结构多孔介质特征分析》的SCI论文翻译</div>
+                            <div class="seperator-line">—————————————————————</div>
+                            <div class="passage">此论文为某高效博士生的第二篇SCI论文，论文最终在世界排名第一的金属材料期刊上发表.....</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="index-content-6">
+
+    </section>
+    <section class="container-fluid" id="index-content-7">
+
+    </section>
+    <section class="container text-center" id="org-logos">
+        <div class="org-logos">
+            {% for logo in org_logos %}
+                <img src={{ logo }}>
+            {% endfor %}
+        </div>
+    </section>
 </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/carousel.js') }}"></script>
 {% endblock %}
