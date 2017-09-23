@@ -1,0 +1,46 @@
+<style type="text/css">
+    #allmap{width:100%;height:500px;}
+</style>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BPPrdn0rN6iz2l1o97PohYt2Q7aOT9lW"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mousewheel.min.js') }}"></script>
+
+<div id="allmap"></div>
+<script type="text/javascript">
+    // 百度地图API功能
+    let scale = 18;
+    let map = new BMap.Map("allmap");
+    let point = new BMap.Point(116.328243,39.982622);
+    let marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);              // 将标注添加到地图中
+    map.centerAndZoom(point, scale);
+    let opts = {
+      width : 200,     // 信息窗口宽度
+      height: 100,     // 信息窗口高度
+      title : "启信信息科技有限公司" , // 信息窗口标题
+      enableMessage:true,//设置允许信息窗发送短息
+      message:"海淀黄庄地铁站旁，北京海诚公证处对面"
+    };
+    let infoWindow = new BMap.InfoWindow("海淀黄庄地铁站旁，北京海诚公证处对面", opts);  // 创建信息窗口对象
+    marker.addEventListener("click", function(){
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+    });
+    // 地图缩放
+    $('#allmap').hover(
+        function(){
+            $('body').css('overflow', 'hidden');
+        },
+        function(){
+            $('body').css('overflow', 'auto');
+        });
+    $('#allmap').bind('mousewheel', function(event, delta) {
+        let dir = delta > 0 ? 'Up' : 'Down';
+        if (dir == 'Up') {
+            scale += 0.5;
+        } else {
+            scale += 0.5;
+        }
+        map.centerAndZoom(point, scale);
+        return false;
+    });
+</script>

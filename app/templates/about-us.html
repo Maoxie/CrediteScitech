@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block detail %}
+    <section id="about-us-banner" class="container-fluid banner-1"></section>
+
+    <section id="about-us-content">
+        <div class="content-inner">
+            <h1 class="text-center title">我们的愿景</h1>
+            <div class="seperator-line text-center">
+                <img src="{{ url_for('static', filename='media/other-pics/yellow-short-seperator-line.png') }}">
+            </div>
+            <h2 class="text-center subtitle">为您提供最专业的科技翻译服务</h2>
+            <div class="passage">
+                <p>
+                    启信科技是以清华毕业生为核心组建的高端科技翻译公司。众所周知，清华大学以理工科见长，有10个理工一级学科排名全国第一。
+                    我们发挥所长，以科技论文翻译和科技文献翻译作为我们的核心服务项目，整合清华大学优势理工科人才资源，外加特聘外籍语言专家，
+                    组成了国内首屈一指的高端科技论文翻译团队，研究出整合型专业语言解决方案，
+                    专为研究学者、科研单位、政府机构、公司企业提供最周全的<b>英文编校、润色</b>以及<b>论文、文献翻译</b>服务 。
+                </p>
+                <p>我们秉承“追求卓越”的清华精神，严格删选译者，采用“一审二校”翻译流程，以及专门针对科技翻译的质量评估体系，实行全流程质量控制。</p>
+                <p>我们相信，将强大的知识资源与灵活稳健的体系有机融合，将新思路转化为新成就，一定能够创造出科技翻译行业的新天地！</p>
+            </div>
+            <div class="pictures text-center">
+                <img src="{{ url_for('static', filename='media/other-pics/about-us-1.jpg') }}">
+                <img src="{{ url_for('static', filename='media/other-pics/about-us-2.jpg') }}">
+            </div>
+            <h1 class="text-center title">联系我们</h1>
+            <div class="seperator-line text-center">
+                <img src="{{ url_for('static', filename='media/other-pics/yellow-short-seperator-line.png') }}">
+            </div>
+            <div class="contact-info text-center">
+                <div class="contact-info-block">
+                    <img src="{{ url_for('static', filename='media/other-pics/about-us-icon-1.png') }}">
+                    <p>联系电话 : 400-658-2018<br />值班电话：132-61753772</p>
+                </div>
+                <div class="contact-info-block">
+                    <img src="{{ url_for('static', filename='media/other-pics/about-us-icon-2.png') }}">
+                    <p>公司地址：北京市海淀区知春路111号理想大厦1904室</p>
+                </div>
+                <div class="contact-info-block">
+                    <img src="{{ url_for('static', filename='media/other-pics/about-us-icon-2.png') }}">
+                    <p>联系邮箱：<br />caiyubin2017@icloud.com</p>
+                </div>
+                <div class="location-map">
+                    <style type="text/css">
+                        #allmap{width:100%;height:500px;}
+                    </style>
+                    <div id="allmap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "contact-us.html" %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type='text/javascript' src='http://api.map.baidu.com/getscript?v=2.0&ak=BPPrdn0rN6iz2l1o97PohYt2Q7aOT9lW&services=&t=20170912191900'></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mousewheel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+{% endblock %}

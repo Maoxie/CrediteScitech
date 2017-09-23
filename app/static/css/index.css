@@ -8,21 +8,6 @@
     font-style: normal
 }
 
-.content-inner{
-    position: relative;
-    width: 1200px;
-    margin: 0 auto;
-}
-.in-content-title{
-    color: #ffc02e;
-    font-size: 24px;
-}
-.in-content-subtitle{
-    color: #bebebe;
-    font-family: Arial, Microsoft Yahei;
-    font-size: 14px;
-    line-height: 32px;
-}
 #org-logos img{
     height: 70px;
     margin-left: 3%;
@@ -38,10 +23,6 @@
     left: 0px;
     height: 100%;
     width: 1000%;
-    transition: left 1s;
-    -moz-transition: left 1s;	/* Firefox 4 */
-    -webkit-transition: left 1s;	/* Safari 和 Chrome */
-    -o-transition: left 1s;	/* Opera */
 }
 #carousel .carousel-picture{
     float: left;
@@ -453,9 +434,58 @@
     font-size: 14px;
     color: #a8a8a8;
 }
-#index-content-6{
-    height: 544px;
+#contact-us{
+    height: 619px;
     background: url('../media/index/in-index-bk-4.jpg') center;
+}
+#contact-us .content-inner{
+    height: 619px;
+    margin-top: 75px;
+}
+#contact-us .title-block{
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 300px;
+    height: 78px;
+    font-size: 24px;
+    color: #404040;
+    line-height: 36px;
+}
+#contact-us .title-block .subtitle{
+    font-size: 16px;
+    color: #cecece;
+}
+#contact-us .title-block p{
+    font-size: 14px;
+    color: #1e1e1e;
+}
+#contact-us .passage{
+    position: absolute;
+    top: 111px;
+    left: 2px;
+    width: 376px;
+    height: 208px;
+    line-height: 36px;
+}
+#contact-us .passage .title{
+    color: rgb(255, 192, 1);
+    font-size: 16px;
+}
+#contact-us .passage .text{
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+    margin-top: 30px;
+}
+#contact-us .social-networks{
+    position: absolute;
+    top: 332px;
+    left: 2px;
+}
+#contact-us .SN-logo{
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
 }
 #org-logos{
     height: 144px;

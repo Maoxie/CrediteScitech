@@ -11,16 +11,26 @@ from .. import db
 #from ..models import ##TODO
 
 
-@main.route('/', methods=['GET', 'POST'])
+@main.route('/', methods=['GET'])
 def index():
-    organization_logos = [
-        url_for('static', filename='media/index/in-index-org-1.png', _external=True),
-        url_for('static', filename='media/index/in-index-org-2.jpg', _external=True),
-        url_for('static', filename='media/index/in-index-org-3.jpg', _external=True),
-        url_for('static', filename='media/index/in-index-org-4.png', _external=True),
-        url_for('static', filename='media/index/in-index-org-5.jpg', _external=True),
-        url_for('static', filename='media/index/in-index-org-6.png', _external=True),
-        url_for('static', filename='media/index/in-index-org-7.png', _external=True)
-    ]
-    return render_template('index.html',
-                           name="Maoxie", org_logos=organization_logos)
+    return render_template('index.html')
+
+
+@main.route('/profession/<pid>', methods=['GET'])
+def profession(pid):
+    # TODO: get from db
+    contents = {
+
+    }
+    return render_template('profession.html',
+                           contents=contents)
+
+
+@main.route('/qc', methods=['GET'])
+def qc():
+    return render_template('qc.html')
+
+
+@main.route('/about', methods=['GET'])
+def about():
+    return render_template('about-us.html')

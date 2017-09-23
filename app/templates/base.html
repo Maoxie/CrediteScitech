@@ -24,6 +24,7 @@
 
 {% block styles %}
     {{ super() }}
+    <link type="text/css" href="{{ url_for('static', filename='css/base.css', _external=True) }}" rel="stylesheet">
     <link type="text/css" href="{{ url_for('static', filename='css/app.css', _external=True) }}" rel="stylesheet">
 {% endblock %}
 
@@ -43,7 +44,7 @@
         <div class="row item-container">
             <div class="col-xs-2">
                 <div class="navbar-item">
-                    <a href="">
+                    <a href="{{ url_for('main.index') }}">
                         <div class="text-center navbar-button active">网站首页</div>
                     </a>
                 </div>
@@ -176,7 +177,7 @@
             </div>
             <div class="col-xs-2">
                 <div class="navbar-item">
-                    <a href="">
+                    <a href="{{ url_for('main.qc') }}">
                         <div class="text-center navbar-button">质量控制</div>
                     </a>
                 </div>
@@ -219,12 +220,15 @@
             </div>
             <div class="col-xs-2">
                 <div class="navbar-item">
-                    <a href="">
+                    <a href="{{ url_for('main.about') }}">
                         <div class="text-center navbar-button">关于我们</div>
                     </a>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="back-to-top-button">
+        <img src="{{ url_for('static', filename='media/base/back-to-top-button.png', _external=True) }}" onclick="">
     </div>
 {% endblock %}
 

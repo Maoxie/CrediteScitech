@@ -2,14 +2,15 @@
  * Created by yzt on 2017/9/17.
  */
 let AUTO_SWITCH_INTERVAL = 8000;
+let TRANSITION = 800;
 function CarouselSwitch(str){
     let num = parseInt(str);
     let var_current = $('#carousel-current');
     if (!num || num==parseInt(var_current.text())) { return; }
     let window_width = parseInt($(document.body).width());
-    $('#carousel-pictures').css({
+    $('#carousel-pictures').animate({
         "left": -(num-1) * window_width + 'px'
-    });
+    }, TRANSITION);
     var_current.html(str);
     let total = parseInt($('#carousel-total').text());
     for (let i = 1; i<=total; i++) {
@@ -33,3 +34,11 @@ function SwitchImage(){
 }
 
 let auto_switch = setInterval(SwitchImage, AUTO_SWITCH_INTERVAL);
+
+$(window).resize(function () {
+    let current = parseInt($('#carousel-current').text());
+    let window_width = parseInt($(document.body).width());
+    $('#carousel-pictures').css({
+        "left": -(current-1) * window_width + 'px'
+    })
+});

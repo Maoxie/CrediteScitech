@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block detail %}
+<section id="qc-banner" class="container-fluid banner-1"></section>
+<section id="qc" class="container">
+    <div class="content-inner">
+        <div class="block block-1">
+            <div class="block-title">
+                <div class="in-content-title">质量保证</div>
+                <div class="in-content-subtitle">QUALITY GUARANTEE</div>
+            </div>
+            <div class="block-passage passage-1">
+                <h3>六阶段品质管控体系</h3>
+                <img class="pic-1" src="{{ url_for('static', filename='media/other-pics/qc-1.png') }}">
+                <p><span class="red">#</span> Phase A：客服与客户充分沟通，确认客户的翻译需求，在客户有专门术语对照表的情况下，请客户提供术语对照表</p>
+                <p><span class="red">#</span> Phase B：译前处理，精确分析文件类型，统计图表、图片以及专业术语数据，形成术语对照表</p>
+                <p><span class="red">#</span> Phase C：根据客户要求与文件类型，严格筛选专业译者</p>
+                <p><span class="red">#</span> Phase D：随机对译者稿件进行抽查，由语言专家评定稿件质量，如不能满足客户要求，立刻更换译者</p>
+                <p><span class="red">#</span> Phase E：收集客户意见，由专业审校人员进行稿件审校、修改</p>
+                <p><span class="red">#</span> Phase F：由项目经理进行稿件终审，终审合格，排版定稿，交付客户。终身免费质保</p>
+            </div>
+            <div class="block-passage passage-2">
+                <h3 class="text-center"># 我们的承诺 #</h3>
+                <p class="text-center"><strong>我们郑重承诺，所有经启信科技翻译编校的文稿的英语语言质量，均符合英文期刊发表标准。此承诺适用于所有经我们编校的文稿，与服务，返稿时间及费用无关！</strong></p>
+                <p>如果您的文稿因为英语语言质量问题收到期刊负评，我们将<span class="strong">无限次免费</span>重新编校您的稿件，只要您已妥善处理了编辑的所有注释与评论并未在投稿前对已编校完成的稿件做显著修订。</p>
+            </div>
+        </div>
+        <div class="block block-2">
+            <div class="block-title">
+                <div class="in-content-title">信息保密保证</div>
+                <div class="in-content-subtitle">CONFIDENTIALITY</div>
+            </div>
+            <div class="block-passage">
+                <h3>六阶段品质管控体系</h3>
+                <p>我们深知文件泄密带来的严重后果，因此我们结合行业经验与科技论文、文献发表的实际需求，制定了严格的保密体系，确保客户的文件信息安全。</p>
+                <p><strong>我们采用以下信息保密措施：</strong></p>
+                <p><span class="red">#</span> 客户在交付尚未发表论文之前，我们会要求客户先删除文章的关键数据、图表，甚至重要结论</p>
+                <p><span class="red">#</span> 对于排版和修图服务，我们会要求客户先将关键数据以符号代替，编排工作也会交由其他非相关专业的编校人员完成</p>
+                <p><span class="red">#</span> 对于所有译者和编校人员我们都会签订保密协议，明确保密义务和保密责任</p>
+                <p><span class="red">#</span> 所有客户都可以与我司签订保密协议，明确保密义务和保密责任</p>
+                <p><span class="red">#</span> 我们承诺，您的文件的任何部分都不会泄露给第三方</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
