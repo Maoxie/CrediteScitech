@@ -8,11 +8,6 @@
     font-style: normal
 }
 
-#org-logos img{
-    height: 70px;
-    margin-left: 3%;
-    margin-right: 3%;
-}
 #carousel{
     position: relative;
     height: 700px;
@@ -493,10 +488,21 @@
 #org-logos .org-logos{
     margin-top: 37px;
 }
-
+#org-logos img{
+    height: 70px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
 .banner-1{
     height: 320px;
     background: url('../media/other-pics/banner-1.jpg') center;
+}
+.banner-2{
+    height: 500px;
+    background-image: url('../media/other-pics/banner-2.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
 #qc .content-inner{
     width: 820px;
@@ -604,4 +610,119 @@
     width: 1200px;
 }
 #allmap{ width:100%; height:500px; }
-
+#profession-content{
+    margin: auto 5%;
+}
+#profession-content .layout-table{
+    width: 100%;
+    min-width: 1150px;
+}
+#profession-content .sidebar-navigation{
+    width: 230px;
+    vertical-align: top;
+}
+#profession-content .nav-header{
+    height: 60px;
+    line-height: 60px;
+    font-family: SimHei;
+    font-size: 18px;
+    color: black;
+    background: rgb(255, 192, 1);
+}
+#profession-content .nav-header span{
+    padding: 8px;
+}
+#profession-content .nav-items{
+    color: #b3b3b3;
+    background: rgb(31, 31, 31);
+    padding: 5px;
+    cursor: default;
+}
+#profession-content .nav-item{
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+}
+#profession-content .nav-item.active{
+    color: #ffc001;
+}
+#profession-content .nav-item span{
+    padding: 7px 10px;
+}
+#profession-content .nav-items .seperator-line{
+    height: 0;
+    width: 100%;
+    border-bottom: dashed rgb(101, 101, 101) 1px;
+}
+#profession-content .contents{
+    margin: 30px;
+    width: auto;
+}
+#profession-content .passage{
+    margin: 26px 0 50px 0;
+}
+#profession-content .passage-title{
+    color: rgb(252, 192, 46);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 26px 0;
+}
+#profession-content .passage-content{
+    color: rgb(53, 53, 53);
+    font-size: 16px;
+    width: 100%;
+    line-height: 24px;
+}
+#profession-content .advantage-block{
+    width: 399px;
+    height: 173px;
+    margin: 10px 0;
+}
+#profession-content .advantage-title{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    color: rgb(102, 102, 102);
+    background: rgb(255, 192, 1);
+}
+#profession-content .advantage-title .icon{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    font-family: icomoon;
+    font-size: 39px;
+    line-height: 35px;
+}
+#profession-content .advantage-title .title{
+    position: absolute;
+    left: 80px;
+    top: 0px;
+    font-size: 20px;
+    line-height: 35px;
+}
+#profession-content .advantage-text{
+    width: 100%;
+    height: 133px;
+    padding: 20px 30px;
+    background: rgb(31, 31, 31);
+    color: rgb(222, 222, 222);
+    font-size: 14px;
+}#profession-content .example-img img{
+    width: 374px;
+}
+#profession-content .example-title{
+    margin-top: 26px;
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+}
+#profession-content .see-more-button{
+    display: inline-block;
+    width: 123px;
+    height: 41px;
+    margin: 15px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    line-height: 41px;
+}

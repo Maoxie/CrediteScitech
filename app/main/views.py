@@ -6,6 +6,7 @@ from datetime import datetime
 from flask import render_template, session, redirect, url_for
 
 from . import main
+from . import init_data
 #from .forms import ##TODO
 from .. import db
 #from ..models import ##TODO
@@ -16,14 +17,16 @@ def index():
     return render_template('index.html')
 
 
-@main.route('/profession/<pid>', methods=['GET'])
+@main.route('/profession/<int:pid>', methods=['GET'])
 def profession(pid):
     # TODO: get from db
-    contents = {
-
-    }
+    # pid starts from 1
+    content = init_data.professions[pid-1]
+    all_professions = init_data.professions_list
     return render_template('profession.html',
-                           contents=contents)
+                           all_professions=all_professions,
+                           current_page=pid,
+                           content=content)
 
 
 @main.route('/qc', methods=['GET'])

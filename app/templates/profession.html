@@ -5,14 +5,84 @@
 {% endblock %}
 
 {% block detail %}
-    <section id="professional-banner" class="container-fluid"></section>
-    <section class="container">
-        <div id="sidebar-navigation">
-
-        </div>
-        <div id="contents">
-
-        </div>
+    <section id="profession-banner" class="container-fluid banner-2"></section>
+    <section id="profession-content" class="container">
+        <table class="layout-table"><tr>
+            <td class="sidebar-navigation">
+                <div class="nav-header"><span>专业领域导航</span></div>
+                <div class="nav-items">
+                    {% for profession in all_professions %}
+                        {% if loop.index == current_page %}
+                            <div class="nav-item active"><span>{{ profession }}</span></div>
+                        {% else %}
+                            <a href="{{ url_for('main.profession', pid=loop.index) }}">
+                                <div class="nav-item"><span>{{ profession }}</span></div>
+                            </a>
+                        {% endif %}
+                        {% if not loop.last %}
+                            <div class="seperator-line"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div class="contents">
+                    <div class="title text-center">
+                        <h1 class="in-content-title"><b>{{ content['name'] }}翻译</b></h1>
+                        <p class="in-content-subtitle">{{ content['english_name'] }}</p>
+                    </div>
+                    <div class="passage">
+                        <h2 class="passage-title">专业介绍</h2>
+                        <p class="passage-content">
+                            {{ content['introduction'] }}
+                        </p>
+                    </div>
+                    <div class="passage">
+                        <h2 class="passage-title">翻译项目</h2>
+                        <div class="passage-content row">
+                            {% for item in content['service_items'] %}
+                                <div class="advantage-block col-xs-6">
+                                    <div class="advantage-title">
+                                        <span class="icon icon-1 unselectable">&#{{ item['icon'] }}</span>
+                                        <span class="title"><b>{{ item['title'] }}</b></span>
+                                    </div>
+                                    <div class="advantage-text">
+                                        <a href={{ item['href'] }}>
+                                            {{ item['description'] }}
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="passage">
+                        <h2 class="passage-title">专业优势</h2>
+                        <div class="passage-content">
+                            <img src="{{ url_for('static', filename='media/profession/advantage-1.png') }}">
+                        </div>
+                    </div>
+                    <div class="passage">
+                        <h2 class="passage-title">优质服务</h2>
+                        <div class="passage-content text-center">
+                            <img src="{{ url_for('static', filename='media/profession/service.png') }}"
+                                 style="width: 620px">
+                        </div>
+                    </div>
+                    <div class="passage">
+                        <h2 class="passage-title">翻译案例</h2>
+                        <div class="passage-content text-center">
+                            <div class="example-img">
+                                <img src="{{ url_for('static', filename=('media/profession/'+content['example']["image"])) }}">
+                            </div>
+                            <div class="example-title">{{ content['example']["title"] }}</div>
+                            <a href={{ content['example']["href"] }}>
+                                <div class="see-more-button yellow-bk">查看更多案例</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </td></tr>
+        </table>
     </section>
 {% endblock %}
 
