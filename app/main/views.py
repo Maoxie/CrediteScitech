@@ -4,6 +4,7 @@ __date__ = '2017/9/13 21:30'
 
 from datetime import datetime
 from flask import render_template, session, redirect, url_for
+from jinja2 import exceptions as JException
 
 from . import main
 from . import init_data
@@ -21,12 +22,27 @@ def index():
 def profession(pid):
     # TODO: get from db
     # pid starts from 1
-    content = init_data.professions[pid-1]
+    try:
+        content = init_data.professions[pid-1]
+    except IndexError, e:
+        return render_template('404.html')
     all_professions = init_data.professions_list
     return render_template('profession.html',
                            all_professions=all_professions,
                            current_page=pid,
                            content=content)
+
+
+@main.route('/production/<int:pid>', methods=['GET'])
+def production(pid):
+    # pid ranges from 1 to 8
+    if pid < 1 or 8 < pid:
+        return render_template('404.html')
+    template = 'production-{0}.html'.format(pid)
+    try:
+        return render_template(template)
+    except JException.TemplateNotFound, e:
+        return render_template('404.html')
 
 
 @main.route('/qc', methods=['GET'])

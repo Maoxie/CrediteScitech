@@ -1,0 +1,69 @@
+{#production base#}
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block detail %}
+    <section id="production-banner" class="container-fluid banner-2"></section>
+    <section id="production-content" class="container">
+        <table class="layout-table"><tr>
+            <td class="sidebar-customer-service">
+                <div class="title yellow-bk">在线客服</div>
+                <div class="content">
+                    <div class="tencent-qq-link">
+                        <div>
+                            <a rel="nofollow" hidefocus="true" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3534176120&amp;site=qq&amp;menu=yes" target="_blank">
+                                <img src="{{ url_for('static', filename='media/other-pics/qq-icon.gif') }}">
+                                <span>Jessica</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a rel="nofollow" hidefocus="true" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2399387665&amp;site=qq&amp;menu=yes" target="_blank">
+                                <img src="{{ url_for('static', filename='media/other-pics/qq-icon.gif') }}">
+                                <span>Kurtis</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="seperator-line"></div>
+                    <div class="contact">
+                        <div class="contact-title">
+                            <img src="{{ url_for('static', filename='media/other-pics/serviceOnlineCall.png') }}">
+                            <span><b>联系方式</b></span>
+                        </div>
+                        <p>客服热线：400-658-2018</p>
+                        <p>邮箱：<br />caiyubin2017@icloud.com</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="contents">
+                    <div class="title text-center">
+                        <h1 class="in-content-title"><b>{% block production_title %}{% endblock %}</b></h1>
+                        <p class="in-content-subtitle">{% block production_title_en %}{% endblock %}</p>
+                    </div>
+                    <div class="passage">
+                        <p class="passage-content">
+                            {% block prodution_introduction %}
+
+                            {% endblock %}
+                        </p>
+                    </div>
+
+                    {% block production_content %}
+
+                    {% endblock %}
+                </div>
+            </td></tr>
+        </table>
+    </section>
+    <div id="production-other-sections">
+        {% block production_other_sections %}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
