@@ -1,0 +1,75 @@
+{#技术标书翻译#}
+{% extends "production-base.html" %}
+
+{% block production_title %}技术标书翻译{% endblock %}
+{% block production_title_en %}TRANSLATION OF TECHNICAL BID DOCUMENTS{% endblock %}
+
+{% block prodution_introduction %}
+标书(bidding documents)翻译包含法律翻译与技术翻译。既要需要具备法律文件的严谨、标准，同时又要注意使用专业的术语，
+全面的介绍自己公司的优势，向投标者提供对该工程的主要技术、质量、工期等要求文件的进行高精准的翻译，
+赢得投标方的信任和好感。<br />
+<br />
+启信科技，拥有自己独特的标书翻译经验，
+尤其是对工程标书翻译、建筑环境标书翻译、技术设置标书翻译、专业咨询标书翻译有着特定的规范与流程，精细化程度全国领先。
+{% endblock %}
+
+{% block production_content %}
+<div class="production-3">
+    <img class="img advantage" src="{{ url_for('static', filename='media/profession/advantage-bid-documents.png') }}">
+    <div class="price text-left">
+        <div class="in-content-title"><b>技术标书翻译四大保障</b></div>
+        <div class="in-content-subtitle">GUARANTEE CONDITIONS</div>
+        <div class="row guarantees">
+            <table class="col-xs-6 guarantee">
+                <tr>
+                    <td class="icon">&#xeac8;</td>
+                    <td class="text text-left">
+                        <h4 class="title"><b>全面反映客户需求</b></h4>
+                        <p>结合原文与客户方的实际需求情况，我们会为客户建立特定标书项目小组，全面了解后，进入翻译工作流程</p>
+                    </td>
+                </tr>
+            </table>
+            <table class="col-xs-6 guarantee">
+                <tr>
+                    <td class="icon">&#xe63f;</td>
+                    <td class="text text-left">
+                        <h4 class="title"><b>科学合理的组织安排</b></h4>
+                        <p>根据稿件的字数，标书翻译小组会对工作进行细分，并进行科学合理的组织安排</p>
+                    </td>
+                </tr>
+            </table>
+            <table class="col-xs-6 guarantee">
+                <tr>
+                    <td class="icon">&#xeae0;</td>
+                    <td class="text text-left">
+                        <h4 class="title"><b>术语、词汇库专业、统一</b></h4>
+                        <p>通过人工识别与多人同步自动辅助识别技术，建立统一术语库后才开始进行通文翻译</p>
+                    </td>
+                </tr>
+            </table>
+            <table class="col-xs-6 guarantee">
+                <tr>
+                    <td class="icon">&#xe9fb;</td>
+                    <td class="text text-left">
+                        <h4 class="title"><b>维护投标方的商业秘密</b></h4>
+                        <p>启信科技拥有严格的保密措施，不但在公司内部设置保密协议，同时对客户的特定稿件与客户签订保密协议，保障客户利益</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="price text-left">
+        <div class="in-content-title"><b>技术标书翻译流程</b></div>
+        <div class="in-content-subtitle">PROCEDURES OF SERVICE</div>
+        <img class="text-center img procedure" src="{{ url_for('static', filename='media/profession/procedure-bid.png') }}">
+    </div>
+    <div class="price text-left">
+        <div class="in-content-title"><b>技术标书翻译价格</b></div>
+        <div class="in-content-subtitle">PRICE OF SERVICE</div>
+        <img class="text-center img price" src="{{ url_for('static', filename='media/price/price-bid-documents.png') }}">
+    </div>
+</div>
+{% endblock %}
+
+{% block production_other_sections %}
+{% endblock %}

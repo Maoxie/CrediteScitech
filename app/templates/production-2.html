@@ -1,0 +1,29 @@
+{#专利翻译#}
+{% extends "production-base.html" %}
+
+{% block production_title %}专利翻译{% endblock %}
+{% block production_title_en %}TRANSLATION OF PATENTS{% endblock %}
+
+{% block prodution_introduction %}
+专利文件是一类比较特殊的科技文件，与一般的科技文献相比，它的语言十分严谨，甚至繁琐，比较接近法律文件的语言，
+此外发明专利和实用新型专利对专业知识还有比较高的要求。在科技翻译领域，无论是外译中还是中译外，
+专利文件属于翻译难度较大的一类。<br />
+<br />
+在专利文件翻译方面，启信科技有一套独特的翻译流程，我们与多家知识产权代理公司合作，
+由具备专利代理背景的译者负责翻译，再由专利相关领域的在校博士生进行术语校对，
+最后由公司专职资深语言专家进行语言审校，通过“一译两校”的过程，确保专利文件翻译的准确性。
+{% endblock %}
+
+{% block production_content %}
+<div class="production-2">
+    <img class="img advantage" src="{{ url_for('static', filename='media/profession/advantage-patents.png') }}">
+    <div class="price text-left">
+        <div class="in-content-title"><b>专利翻译价格</b></div>
+        <div class="in-content-subtitle">TRANSLATION OF PATENTS</div>
+        <img class="text-center img price" src="{{ url_for('static', filename='media/price/price-patents.png') }}">
+    </div>
+</div>
+{% endblock %}
+
+{% block production_other_sections %}
+{% endblock %}

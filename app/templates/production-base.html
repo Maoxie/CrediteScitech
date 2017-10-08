@@ -3,6 +3,7 @@
 
 {% block styles %}
     {{ super() }}
+    <link type="text/css" href="{{ url_for('static', filename='css/productions.css', _external=True) }}" rel="stylesheet">
 {% endblock %}
 
 {% block detail %}
@@ -50,7 +51,6 @@
                             {% endblock %}
                         </p>
                     </div>
-
                     {% block production_content %}
 
                     {% endblock %}

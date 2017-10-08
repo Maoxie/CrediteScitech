@@ -7,6 +7,7 @@
     font-weight: normal;
     font-style: normal
 }
+.icon{ font-family: icomoon }
 
 #carousel{
     position: relative;
@@ -307,17 +308,9 @@
     margin-right: 11px;
     margin-bottom: 11px;
 }
-#index-content-3 .picture-container.small{
-    width: 181px;
-    height: 129px;
-}
 #index-content-3 .picture-container.small img{
     width: 181px;
     height: 129px;
-}
-#index-content-3 .picture-container.big{
-    width: 376px;
-    height: 249px;
 }
 #index-content-3 .picture-container.big img{
     width: 376px;
@@ -730,89 +723,4 @@
     color: black;
     font-size: 14px;
     line-height: 41px;
-}
-#production-content .in-content-title,
-#production-1 .in-content-title{
-    margin: 0;
-}
-#production-content .sidebar-customer-service{
-    width: 226px;
-    height: auto;
-    font-size: 14px;
-    color: rgb(102, 102, 102);
-    padding: 50px 0;
-}
-#production-content .sidebar-customer-service .title{
-    width: auto;
-    height: 45px;
-    line-height: 45px;
-    color: white;
-    font-size: 16px;
-    padding: 0 8px;
-    border-radius: 5px 5px 0 0;
-}
-#production-content .sidebar-customer-service .content{
-    width: auto;
-    padding: 10px 8px;
-    background: rgb(246, 246, 246);
-}
-#production-content .sidebar-customer-service .tencent-qq-link{
-    line-height: 25px;
-}
-#production-content .seperator-line{
-    height: 0;
-    width: 100%;
-    border-bottom: dashed rgb(217, 217, 217) 1px;
-    margin: 8px 0;
-}
-#production-content .sidebar-customer-service .contact-title{
-    line-height: 30px;
-}
-#production-content .contents{
-    width: 789px;
-    margin: 50px 20px;
-    font-size: 16px;
-    color: rgb(102, 102, 102);
-    line-height: 24px;
-}
-#production-content .contents .title{
-    text-align: center;
-}
-#production-content .contents .passage{
-    margin: 26px 0;
-}
-#production-other-sections{
-    font-size: 16px;
-    color: rgb(102, 102, 102);
-    line-height: 24px;
-}
-#production-other-sections .production-1.other-section-1{
-    height: 797px;
-    background: url('../media/index/in-index-bk-3.jpg') center;
-}
-#production-othier-sections .production-1.other-section-1 .content-inner{
-    height: 797px;
-}
-#production-other-sections .icon{
-    font-family: icomoon;
-    font-size: 78px;
-}
-#production-other-sections .production-1.other-section-1 .passage-1{
-    position: absolute;
-    top: 174px;
-    left: 687px;
-    width: 433px;
-    height: 242px;
-}
-#production-other-sections .production-1.other-section-1 .passage-1 .text{
-    margin-top: 26px;
-    color: rgb(222, 222, 222);
-}
-#production-other-sections .production-1.other-section-1 .passage-2{
-    position: absolute;
-    top: 151px;
-    left: 88px;
-    width: 382px;
-    height: auto;
-    text-align: right;
 }

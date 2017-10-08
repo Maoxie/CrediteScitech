@@ -1,6 +1,7 @@
 .idea/
 venv/
 .git/
+.vscode/
 # Windows:
 Thumbs.db
 ehthumbs.db
