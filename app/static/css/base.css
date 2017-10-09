@@ -13,6 +13,7 @@ p{ margin: 0px; }
 .content-inner{
     position: relative;
     width: 1200px;
+    height: inherit;
     margin: 0 auto;
 }
 .in-content-title{
