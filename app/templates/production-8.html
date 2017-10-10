@@ -1,0 +1,33 @@
+{#科技论文修图#}
+{% extends "production-base.html" %}
+
+{% block production_title %}科技论文修图{% endblock %}
+{% block production_title_en %}PICTURE MODIFYING{% endblock %}
+
+{% block prodution_introduction %}
+论文修图属于比较高层次的要求。图表是学术论文的灵魂，科研工作者可能几个月的心血都浓缩在几张图表上。
+好的图表不仅美观大方，而且能准确地表现出数据和规律，是文章的加分项。图表都做不好，论文在外文期刊上也很难通过。<br>
+<br>
+启信科技与42位英语论文发表经验丰富的清华博士研究生合作，特推出科技论文修图服务。
+论文修图服务绝非简单对图片图表进行剪切、美化、修饰，而是要从数据选择、数据表现方式等更深层次对图表进行优化，
+让图表展现规律更加清晰醒目。学术大牛一对一服务，百分百包您满意。<br>
+{% endblock %}
+
+{% block production_content %}
+<div class="production-8">
+    <div class="price text-left">
+        <div class="in-content-title"><b>服务速度与价格</b></div>
+        <div class="in-content-subtitle">PRICE&SPEED</div>
+        <img class="text-center img price" src="{{ url_for('static', filename='media/price/price-picture-modifying.png') }}">
+    </div>
+    <div class="price text-left">
+        <div class="in-content-title"><b>相关产品</b></div>
+        <a href="{{ url_for('main.production', pid=7) }}">
+            <p class="related-production-link">英语论文排版</p>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block production_other_sections %}
+{% endblock %}

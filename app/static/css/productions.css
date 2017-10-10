@@ -219,15 +219,20 @@
     height: 146px;
     margin: 30px 60px;
 }
-#production-content .production-5 .pictures.row{
+#production-content .production-5 .pictures.row,
+#production-content .production-6 .pictures.row{
     min-width: 900px;
     margin: 60px 0;
 }
-#production-content .production-5 .pictures .picture{
+#production-content .production-5 .pictures .picture,
+#production-content .production-6 .pictures .picture,
+#production-content .production-7 .pictures .picture{
     width: 210px;
     height: 128px;
 }
-#production-content .production-5 .promise{
+#production-content .production-5 .promise,
+#production-content .production-6 .promise,
+#production-content .production-7 .promise{
     font-size: 22px;
     color: rgb(33, 33, 33);
     margin: 26px 0 26px 40px;
@@ -237,23 +242,27 @@
     height: 471px;
     margin: 20px auto 60px 30px;
 }
-#production-content .production-5 .fields{
+#production-content .production-5 .fields,
+#production-content .production-6 .fields{
     height: 388px;
     margin-bottom: 60px;
 }
-#production-content .production-5 .fields .passage-1{
+#production-content .production-5 .fields .passage-1,
+#production-content .production-6 .fields .passage-1{
     position: absolute;
     top: 72px;
     left: 0px;
     width: 430px;
     height: 187px;
 }
-#production-content .production-5 .fields .passage-1 .text{
+#production-content .production-5 .fields .passage-1 .text,
+#production-content .production-6 .fields .passage-1 .text{
     color: rgb(100, 100, 100);
     font-size: 15px;
     margin-top: 26px;
 }
-#production-content .production-5 .fields .pictures{
+#production-content .production-5 .fields .pictures,
+#production-content .production-6 .fields .pictures{
     position: absolute;
     top: 67px;
     left: 450px;
@@ -261,7 +270,8 @@
     height: 330px;
     overflow: hidden;
 }
-#production-content .production-5 .fields .picture-container{
+#production-content .production-5 .fields .picture-container,
+#production-content .production-6 .fields .picture-container{
     display: inline-block;
     margin-right: 11px;
     margin-bottom: 6px;
@@ -269,7 +279,8 @@
     height: 145px;
     overflow: hidden;
 }
-#production-content .production-5 .fields img{
+#production-content .production-5 .fields img,
+#production-content .production-6 .fields img{
     width: inherit;
     height: inherit;
 }
@@ -277,4 +288,35 @@
     width: 739px;
     height: 184px;
     margin: 30px 60px;
+}
+#production-content .production-6 .img.classes{
+    width: 795px;
+    height: 457px;
+    margin: 20px auto 60px 30px;
+}
+#production-content .production-6 .img.price{
+    width: 862px;
+    height: 157px;
+    margin: 30px;
+}
+#production-content .production-7 .img.price{
+    width: 752px;
+    height: 147px;
+    margin: 30px;
+}
+#production-content .production-8 .img.price{
+    width: 695px;
+    height: 136px;
+    margin: 30px;
+}
+#production-content .production-8 .img.price{
+    width: 695px;
+    height: 136px;
+    margin: 30px;
+}
+#production-content .related-production-link{
+    font-size: 20px;
+    text-decoration: underline;
+    margin: 15px 30px;
+    font-weight: bold;
 }

@@ -1,0 +1,37 @@
+{#启信科技论文排版#}
+{% extends "production-base.html" %}
+
+{% block production_title %}启信科技论文排版{% endblock %}
+{% block production_title_en %}TYPE SETTING{% endblock %}
+
+{% block prodution_introduction %}
+学术论文编排一般要求比较苛刻，大到摘要、字体、字号、行距、段前距，小到注释、参考文献都有十分严格的要求，
+各个期刊给出的格式要求一般有十几页之多，而且这些要求都是用英文写就的，学者稍不小心就可以犯些小错误，
+结果被期刊的编辑退稿，费事又费力。很多人要反复修改几次才能通过，最后心力交瘁。
+而现在您可以将论文编排的任务托付给最专业、最值得信赖的人了。<br>
+<br>
+启信科技，能够提供最专业的论文编排服务，42论文发表经验丰富的清华博士亲自按照客户提供的排版要求进行专业编排，
+最快一天交稿，方便快捷。<br>
+<br>
+另外，我们保证每一份稿件都会进行预前处理（隐去关键数据），并与编校者签订保密协议，百分百保障您的信息安全！
+{% endblock %}
+
+{% block production_content %}
+<div class="production-7">
+    <div class="picture advantage">
+        <img class="picture" src="{{ url_for('static', filename='media/profession/advantage-type-setting.png') }}">
+    </div>
+    <p class="promise text-center">
+        <b>我们郑重承诺，启信科技编排的每一份科技论文都能满足SCI等国际英文期刊的格式要求。
+            如客户论文因格式问题被期刊退稿，一年内我们都将根据编辑修改意见免费返修，直到论文通过为止！</b>
+    </p>
+    <div class="price text-left">
+        <div class="in-content-title"><b>排版、修图价格与速度</b></div>
+        <div class="in-content-subtitle">PRICE&SPEED</div>
+        <img class="text-center img price" src="{{ url_for('static', filename='media/price/price-type-setting.png') }}">
+    </div>
+</div>
+{% endblock %}
+
+{% block production_other_sections %}
+{% endblock %}

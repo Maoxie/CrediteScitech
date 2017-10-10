@@ -37,3 +37,6 @@ $(document).ready(function(){
         return false;
     });
 });
+$('#header-navibar').onload(function(){
+    // TODO: change navbar active status
+})
