@@ -39,4 +39,4 @@ $(document).ready(function(){
 });
 $('#header-navibar').onload(function(){
     // TODO: change navbar active status
-})
+});
