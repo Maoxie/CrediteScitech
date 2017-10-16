@@ -218,7 +218,7 @@
 }
 #index-content-2{
     height: 513px;
-    background: url('../media/index/in-index-bk-2.png') center;
+    background: url('../media/index/in-index-bk-2.jpg') center;
 }
 #index-content-2 .content-inner{
     height: 513px;
@@ -479,10 +479,10 @@
     height: 144px;
 }
 #org-logos .org-logos{
-    margin-top: 37px;
+    margin-top: 25px;
 }
 #org-logos img{
-    height: 70px;
+    height: 90px;
     margin-left: 3%;
     margin-right: 3%;
 }
