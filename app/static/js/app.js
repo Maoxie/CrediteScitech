@@ -6,14 +6,14 @@ $('.navbar-item').bind({
     'mouseleave': hideMenu
 });
 function showMenu(e){
-    let menu = $(this).find('.navbar-menu');
+    let menu = $(this).parent().next('.navbar-menu');
     if (!menu) { return; }
     menu.css({
         "visibility": 'visible'
     });
 }
 function hideMenu(e){
-    let menu = $(this).find('.navbar-menu');
+    let menu = $(this).parent().next('.navbar-menu');
     if (!menu) { return; }
     menu.css({
         "visibility": 'hidden'
