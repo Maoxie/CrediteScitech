@@ -129,7 +129,7 @@
         <div class="content-inner">
             <div class="title-container text-right">
                 <h1 class="in-content-title">专业优势</h1>
-                <p class="in-content-subtitle">ADVANTAGES IN SPECILIZATION</p>
+                <p class="in-content-subtitle">PROFESSIONAL ADVANTAGES</p>
             </div>
             <table class="content-table">
                 <thead>
@@ -169,7 +169,7 @@
         <div class="content-inner">
             <div class="paragraph-1">
                 <div class="in-content-title">学科领域</div>
-                <div class="in-content-subtitle">FACULTIES</div>
+                <div class="in-content-subtitle">DISCIPLINES</div>
                 <div class="p1">我们的服务领域以理工科为主，涵盖医学医药、机械电子、物理数学、化学化工、环境工程、核能核电、信息技术、生命科学等八大领域</div>
             </div>
             <div class="pictures">
@@ -260,9 +260,9 @@
                     <a href="">
                         <img src="{{ url_for('static', filename='media/index/in-content-5-2.jpg') }}">
                         <div class="text">
-                            <div class="title">题为《藕状结构多孔介质特征分析》的SCI论文翻译</div>
+                            <div class="title">XX国企《国际钠火会议会议报告》翻译</div>
                             <div class="seperator-line">—————————————————————</div>
-                            <div class="passage">此论文为某高效博士生的第二篇SCI论文，论文最终在世界排名第一的金属材料期刊上发表.....</div>
+                            <div class="passage">20万字的会议报告在一周内.由团队协作完成，无论翻译速度还是翻译质量客户都非常满意.....</div>
                         </div>
                     </a>
                 </div>
@@ -270,9 +270,9 @@
                     <a href="">
                         <img src="{{ url_for('static', filename='media/index/in-content-5-3.jpg') }}">
                         <div class="text">
-                            <div class="title">题为《藕状结构多孔介质特征分析》的SCI论文翻译</div>
+                            <div class="title">中建集团海外某桥梁项目技术标书翻译</div>
                             <div class="seperator-line">—————————————————————</div>
-                            <div class="passage">此论文为某高效博士生的第二篇SCI论文，论文最终在世界排名第一的金属材料期刊上发表.....</div>
+                            <div class="passage">技术标书翻译任务重，文件杂，专业知识多，但是我们清华土木工程系的硕博研究生译者出色地完成了此项翻译任务......</div>
                         </div>
                     </a>
                 </div>
@@ -284,5 +284,7 @@
 
 {% block scripts %}
     {{ super() }}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.lazyload.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index-lazy-load.js') }}"></script>
 {% endblock %}

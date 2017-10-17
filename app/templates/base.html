@@ -49,132 +49,136 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xs-2">
-                <div class="navbar-item">
-                    <div class="text-center navbar-button">翻译领域</div>
+            <div class="with-menu">
+                <div class="col-xs-2">
+                    <div class="navbar-item">
+                        <div class="text-center navbar-button">翻译领域</div>
+                    </div>
                 </div>
-            </div>
-            <div class="navbar-menu">
-                        <div class="row">
-                            <div class="col-xs-4 menu-col">
-                                <div style="margin-left: 120px;">
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=1) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>医学医药
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=2) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>机械电子
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=3) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>物理数学
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=4) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>化学化工
-                                        </a>
-                                    </p>
-                                </div>
-                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                <div class="navbar-menu">
+                    <div class="row">
+                        <div class="col-xs-4 menu-col">
+                            <div style="margin-left: 120px;">
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=1) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>医学医药
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=2) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>机械电子
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=3) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>物理数学
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=4) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>化学化工
+                                    </a>
+                                </p>
                             </div>
-                            <div class="col-xs-4 menu-col">
-                                <div style="margin-left: 120px;">
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=5) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>生命科学
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=6) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>核能核电
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=7) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>信息技术
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.profession', pid=8) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>环境工程
-                                        </a>
-                                    </p>
-                                </div>
-                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                        </div>
+                        <div class="col-xs-4 menu-col">
+                            <div style="margin-left: 120px;">
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=5) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>生命科学
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=6) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>核能核电
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=7) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>信息技术
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.profession', pid=8) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>环境工程
+                                    </a>
+                                </p>
                             </div>
-                            <div class="col-xs-4 menu-col">
-                                <img src="{{ url_for('static', filename='media/base/in-narbar-menu-1.jpg') }}"
-                                     style="height: 207px; margin-left: 30px; margin-top: 7px;">
-                            </div>
+                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                        </div>
+                        <div class="col-xs-4 menu-col">
+                            <img src="{{ url_for('static', filename='media/base/in-narbar-menu-1.jpg') }}"
+                                 style="height: 207px; margin-left: 30px; margin-top: 7px;">
                         </div>
                     </div>
-            <div class="col-xs-2">
-                <div class="navbar-item">
-                    <div class="text-center navbar-button">服务产品</div>
                 </div>
             </div>
-            <div class="navbar-menu">
-                        <div class="row">
-                            <div class="col-xs-4 menu-col">
-                                <div style="margin-left: 120px;">
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=1) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>科技文献翻译
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=2) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>专利文件翻译
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=3) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>技术标书翻译
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=4) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>工程图纸翻译
-                                        </a>
-                                    </p>
-                                </div>
-                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+            <div class="with-menu">
+                <div class="col-xs-2">
+                    <div class="navbar-item">
+                        <div class="text-center navbar-button">服务产品</div>
+                    </div>
+                </div>
+                <div class="navbar-menu">
+                    <div class="row">
+                        <div class="col-xs-4 menu-col">
+                            <div style="margin-left: 120px;">
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=1) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>科技文献翻译
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=2) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>专利文件翻译
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=3) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>技术标书翻译
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=4) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>工程图纸翻译
+                                    </a>
+                                </p>
                             </div>
-                            <div class="col-xs-4 menu-col">
-                                <div style="margin-left: 120px;">
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=5) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>英语论文翻译
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=6) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>英语论文润色
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=7) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>论文专业排版
-                                        </a>
-                                    </p>
-                                    <p style="line-height: 56px; margin-bottom: auto;">
-                                        <a href="{{ url_for('main.production', pid=8) }}">
-                                            <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>科技论文修图
-                                        </a>
-                                    </p>
-                                </div>
-                                <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                        </div>
+                        <div class="col-xs-4 menu-col">
+                            <div style="margin-left: 120px;">
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=5) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>英语论文翻译
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=6) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>英语论文润色
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=7) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>论文专业排版
+                                    </a>
+                                </p>
+                                <p style="line-height: 56px; margin-bottom: auto;">
+                                    <a href="{{ url_for('main.production', pid=8) }}">
+                                        <span style="color: #8c8c8c;">>&nbsp&nbsp&nbsp</span>科技论文修图
+                                    </a>
+                                </p>
                             </div>
-                            <div class="col-xs-4 menu-col">
-                                <img src="{{ url_for('static', filename='media/base/in-narbar-menu-2.jpg') }}"
-                                     style="height: 207px; margin-left: 80px; margin-top: 7px;">
-                            </div>
+                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                        </div>
+                        <div class="col-xs-4 menu-col">
+                            <img src="{{ url_for('static', filename='media/base/in-narbar-menu-2.jpg') }}"
+                                 style="height: 207px; margin-left: 80px; margin-top: 7px;">
                         </div>
                     </div>
+                </div>
+            </div>
             <div class="col-xs-2">
                 <div class="navbar-item">
                     <a href="{{ url_for('main.qc') }}">
@@ -182,42 +186,44 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xs-2">
-                <div class="navbar-item">
-                    <div class="text-center navbar-button">案例简介</div>
+            <div class="with-menu">
+                <div class="col-xs-2">
+                    <div class="navbar-item">
+                        <div class="text-center navbar-button">案例简介</div>
+                    </div>
                 </div>
-            </div>
-            <div class="navbar-menu">
-                        <div class="row">
-                            <div class="col-xs-4 menu-col">
-                                <div style="margin-left: 40px;">
-                                    <a href="">
-                                        <img src="{{ url_for('static', filename='media/base/in-narbar-menu-3.jpg') }}"
-                                             style="height: 158px; width: 253px; margin-top: 7px;">
-                                        <p class="text-center" style="margin-top: 21px;">科技文献翻译案例</p>
-                                    </a>
-                                </div>
+                <div class="navbar-menu">
+                    <div class="row">
+                        <div class="col-xs-4 menu-col">
+                            <div style="margin-left: 40px;">
+                                <a href="">
+                                    <img src="{{ url_for('static', filename='media/base/in-narbar-menu-3.jpg') }}"
+                                         style="height: 158px; width: 253px; margin-top: 7px;">
+                                    <p class="text-center" style="margin-top: 21px;">科技文献翻译案例</p>
+                                </a>
                             </div>
-                            <div class="col-xs-4 menu-col">
-                                <div style="margin-left: 40px;">
-                                    <a href="">
-                                        <img src="{{ url_for('static', filename='media/base/in-narbar-menu-4.jpg') }}"
-                                             style="height: 158px; width: 253px; margin-top: 7px;">
-                                        <p class="text-center" style="margin-top: 21px;">英语论文翻译案例</p>
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="col-xs-4 menu-col">
+                            <div style="margin-left: 40px;">
+                                <a href="">
+                                    <img src="{{ url_for('static', filename='media/base/in-narbar-menu-4.jpg') }}"
+                                         style="height: 158px; width: 253px; margin-top: 7px;">
+                                    <p class="text-center" style="margin-top: 21px;">英语论文翻译案例</p>
+                                </a>
                             </div>
-                            <div class="col-xs-4 menu-col">
-                                <div style="margin-left: 40px;">
-                                    <a href="">
-                                        <img src="{{ url_for('static', filename='media/base/in-narbar-menu-5.png') }}"
-                                             style="height: 158px; width: 253px; margin-top: 7px;">
-                                        <p class="text-center" style="margin-top: 21px;">技术标书翻译案例</p>
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="col-xs-4 menu-col">
+                            <div style="margin-left: 40px;">
+                                <a href="">
+                                    <img src="{{ url_for('static', filename='media/base/in-narbar-menu-5.jpg') }}"
+                                         style="height: 158px; width: 253px; margin-top: 7px;">
+                                    <p class="text-center" style="margin-top: 21px;">技术标书翻译案例</p>
+                                </a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
             <div class="col-xs-2">
                 <div class="navbar-item">
                     <a href="{{ url_for('main.about') }}">
