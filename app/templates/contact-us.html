@@ -15,19 +15,19 @@
         </div>
         <div class="social-networks">
             <a href="">
-                <img class="SN-logo" src="{{ url_for('static', filename='media/index/social-network-logo-weixin.png') }}">
+                <img class="SN-logo lazy" data-original="{{ url_for('static', filename='media/index/social-network-logo-weixin.png') }}">
             </a>
             <a href="">
-                <img class="SN-logo" src="{{ url_for('static', filename='media/index/social-network-logo-sina.png') }}">
+                <img class="SN-logo lazy" data-original="{{ url_for('static', filename='media/index/social-network-logo-sina.png') }}">
             </a>
             <a href="">
-                <img class="SN-logo" src="{{ url_for('static', filename='media/index/social-network-logo-qq.png') }}">
+                <img class="SN-logo lazy" data-original="{{ url_for('static', filename='media/index/social-network-logo-qq.png') }}">
             </a>
         </div>
     </div>
 </section>
 <section class="container text-center" id="org-logos">
     <div class="org-logos">
-        <img src="{{ url_for('static', filename='media/index/in-index-org.jpg') }}">
+        <img class="lazy" data-original="{{ url_for('static', filename='media/index/in-index-org.jpg') }}">
     </div>
 </section>

@@ -7,6 +7,7 @@ $('.with-menu').bind({
 });
 function showMenu(e){
     let menu = $(this).find('.navbar-menu');
+    console.info("bark")
     if (!menu) { return; }
     menu.css({
         "visibility": 'visible'

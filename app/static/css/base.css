@@ -1,3 +1,14 @@
+@charset "utf-8";@font-face {
+    font-family: 'icomoon';
+    src: url('fontsIco/icomoon.eot?-2mgmdr&v=147');
+    src: url('fontsIco/icomoon.eot?#iefix-2mgmdr&v=147') format('embedded-opentype'),
+         url('fontsIco/icomoon.ttf?-2mgmdr&v=147') format('truetype'),
+         url('fontsIco/icomoon.woff?-2mgmdr&v=147') format('woff');
+    font-weight: normal;
+    font-style: normal
+}
+.icon{ font-family: icomoon }
+
 body{
     position: relative;
     font-family: Microsoft YaHei, SimSun;
@@ -68,11 +79,13 @@ p{ margin: 0px; }
     width: 264px;
     height: 26px;
 }
-#header-phone img{
+#header-phone .icon{
     position: absolute;
     left: -53px;
-    bottom: -10px;
+    bottom: 0px;
     height: 47px;
+    font-size: 47px;
+    color: rgba(75,75,75,1);
 }
 #header-phone .phone-number{
     font-family: impact, Microsoft YaHei, SimHei;
