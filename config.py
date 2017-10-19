@@ -19,13 +19,11 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    CDN_URL = ''
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 
 
 class ProductionConfig(Config):
-    CDN_URL = os.getenv('CREDITE_CDN_URL')
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 
