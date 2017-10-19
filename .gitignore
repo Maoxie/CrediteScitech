@@ -2,6 +2,7 @@
 venv/
 .git/
 .vscode/
+static_file_list.txt
 # Windows:
 Thumbs.db
 ehthumbs.db

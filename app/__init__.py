@@ -8,6 +8,7 @@ from flask_bootstrap import Bootstrap, WebCDN, ConditionalCDN, \
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 from config import config
+import re
 
 bootstrap = Bootstrap()
 moment = Moment()
@@ -43,6 +44,22 @@ def create_app(config_name):
 
     # bootstrap使用国内CDN
     change_cdn_domestic(app)
+
+    def cdn_url_builder(error, endpoint, values):
+        # error handler to build url for resources on cdn.
+        # refer to https://github.com/pallets/flask/issues/785
+        if not re.match(r'.*\.static', endpoint):
+            return
+        filename = values.pop('filename')
+        # Ignore _external flag, we're always external
+        values.pop('_external', None)
+        cdn_url = config[config_name].CDN_URL
+        return 'http://%s/static/%s' % (
+            cdn_url,
+            filename
+        )
+
+    app.url_build_error_handlers.append(cdn_url_builder)
 
     # 注册蓝本
     from .main import main as main_blueprint

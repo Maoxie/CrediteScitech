@@ -4,7 +4,7 @@ __date__ = '2017/9/13 21:30'
 
 from flask import Blueprint
 
-main = Blueprint('main', __name__, static_folder='static')
+main = Blueprint('main', __name__)
 
 from . import views, errors
 
