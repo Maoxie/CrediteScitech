@@ -10,10 +10,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
-    # CREDITE_PROJECT_URL = os.getenv('CREDITE_PROJECT_URL')
-    CREDITE_PROJECT_URL = 'www.qixin-trans.com'
-    # CDN_URL = ''
-    CDN_URL = 'static.qixin-trans.com'
+    CREDITE_PROJECT_URL = os.getenv('CREDITE_PROJECT_URL')
 
     @staticmethod
     def init_app(app):
@@ -22,6 +19,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    CDN_URL = os.getenv('DEV_CDN_URL') or ''
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 

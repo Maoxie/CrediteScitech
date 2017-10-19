@@ -2,7 +2,7 @@
 import os
 import csv
 
-URL_PREFIX = os.getenv('CREDITE_PROJECT_URL') or 'qixin-trans.com'
+URL_PREFIX = os.getenv('CREDITE_PROJECT_URL') or 'static.qixin-trans.com'
 
 static_files = []
 with open('static_file_list.txt', 'w') as output_f:

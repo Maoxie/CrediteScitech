@@ -18,19 +18,19 @@
     <meta name="keywords" content="cc"/>
     <meta name="description" content="cc"/>
 {#    <link rel='canonical' href='//www.xx12757052.icoc.me/col.jsp?id=112'>#}
-    <link type="image/x-icon" href="{{ url_for('static', filename='media/base/favicon.ico') }}" rel="icon"/>
+    <link type="image/x-icon" href="{{ url_for('.static', filename='media/base/favicon.ico') }}" rel="icon"/>
     <link href="{{ url_for('.static', filename='media/base/favicon.ico', _external=True) }}" rel="shortcut icon"/>
 {% endblock %}
 
 {% block styles %}
     {{ super() }}
-    <link type="text/css" href="{{ url_for('static', filename='css/base.css', _external=True) }}" rel="stylesheet">
-    <link type="text/css" href="{{ url_for('static', filename='css/app.css', _external=True) }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('.static', filename='css/base.css', _external=True) }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('.static', filename='css/app.css', _external=True) }}" rel="stylesheet">
 {% endblock %}
 
 {% block navbar %}
     <div class="container" id="header-div">
-        <img id="header-logo" src="{{ url_for('static', filename='media/base/header-logo.png') }}" alt="header logo">
+        <img id="header-logo" src="{{ url_for('.static', filename='media/base/header-logo.png') }}" alt="header logo">
         <div id="header-slogan">
             <div class="row"><span class="slogan">专注科技翻译</span></div>
             <div class="row"><span class="slogan">用翻译提升学术价值</span></div>
@@ -80,7 +80,7 @@
                                     </a>
                                 </p>
                             </div>
-                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            <img class="seperator-line" src="{{ url_for('.static', filename='media/base/seperator-line.png') }}">
                         </div>
                         <div class="col-xs-4 menu-col">
                             <div style="margin-left: 120px;">
@@ -105,10 +105,10 @@
                                     </a>
                                 </p>
                             </div>
-                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            <img class="seperator-line" src="{{ url_for('.static', filename='media/base/seperator-line.png') }}">
                         </div>
                         <div class="col-xs-4 menu-col">
-                            <img class="lazy" data-original="{{ url_for('static', filename='media/base/in-narbar-menu-1.jpg') }}"
+                            <img class="lazy" data-original="{{ url_for('.static', filename='media/base/in-narbar-menu-1.jpg') }}"
                                  style="height: 207px; margin-left: 30px; margin-top: 7px;">
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                                     </a>
                                 </p>
                             </div>
-                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            <img class="seperator-line" src="{{ url_for('.static', filename='media/base/seperator-line.png') }}">
                         </div>
                         <div class="col-xs-4 menu-col">
                             <div style="margin-left: 120px;">
@@ -170,10 +170,10 @@
                                     </a>
                                 </p>
                             </div>
-                            <img class="seperator-line" src="{{ url_for('static', filename='media/base/seperator-line.png') }}">
+                            <img class="seperator-line" src="{{ url_for('.static', filename='media/base/seperator-line.png') }}">
                         </div>
                         <div class="col-xs-4 menu-col">
-                            <img class="lazy" data-original="{{ url_for('static', filename='media/base/in-narbar-menu-2.jpg') }}"
+                            <img class="lazy" data-original="{{ url_for('.static', filename='media/base/in-narbar-menu-2.jpg') }}"
                                  style="height: 207px; margin-left: 80px; margin-top: 7px;">
                         </div>
                     </div>
@@ -197,7 +197,7 @@
                         <div class="col-xs-4 menu-col">
                             <div style="margin-left: 40px;">
                                 <a href="">
-                                    <img class="lazy" data-original="{{ url_for('static', filename='media/base/in-narbar-menu-3.jpg') }}"
+                                    <img class="lazy" data-original="{{ url_for('.static', filename='media/base/in-narbar-menu-3.jpg') }}"
                                          style="height: 158px; width: 253px; margin-top: 7px;">
                                     <p class="text-center" style="margin-top: 21px;">科技文献翻译案例</p>
                                 </a>
@@ -206,7 +206,7 @@
                         <div class="col-xs-4 menu-col">
                             <div style="margin-left: 40px;">
                                 <a href="">
-                                    <img class="lazy" data-original="{{ url_for('static', filename='media/base/in-narbar-menu-4.jpg') }}"
+                                    <img class="lazy" data-original="{{ url_for('.static', filename='media/base/in-narbar-menu-4.jpg') }}"
                                          style="height: 158px; width: 253px; margin-top: 7px;">
                                     <p class="text-center" style="margin-top: 21px;">英语论文翻译案例</p>
                                 </a>
@@ -215,7 +215,7 @@
                         <div class="col-xs-4 menu-col">
                             <div style="margin-left: 40px;">
                                 <a href="">
-                                    <img class="lazy" data-original="{{ url_for('static', filename='media/base/in-narbar-menu-5.jpg') }}"
+                                    <img class="lazy" data-original="{{ url_for('.static', filename='media/base/in-narbar-menu-5.jpg') }}"
                                          style="height: 158px; width: 253px; margin-top: 7px;">
                                     <p class="text-center" style="margin-top: 21px;">技术标书翻译案例</p>
                                 </a>
@@ -234,7 +234,7 @@
         </div>
     </div>
     <div id="back-to-top-button" hidden="hidden">
-        <img src="{{ url_for('static', filename='media/base/back-to-top-button.png', _external=True) }}">
+        <img src="{{ url_for('.static', filename='media/base/back-to-top-button.png', _external=True) }}">
     </div>
 {% endblock %}
 
@@ -251,7 +251,7 @@
         <div id="footer">
             <div class="container">
                 <div style="height: 66px; width: 100%"></div>
-                <img src="{{ url_for('static', filename='media/base/in-footer-1.png') }}">
+                <img src="{{ url_for('.static', filename='media/base/in-footer-1.png') }}">
                 <p class="text-center" style="font-size: 16px; color: #a6a6a6">
                     <a href="">医学医药</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="">机械电子</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -279,7 +279,7 @@
 
 {% block scripts %}
     {{ super() }}
-    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.lazyload.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/app-lazyload.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/jquery.lazyload.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/app-lazyload.js') }}"></script>
 {% endblock %}

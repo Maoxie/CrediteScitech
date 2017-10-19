@@ -48,13 +48,17 @@ def create_app(config_name):
     def cdn_url_builder(error, endpoint, values):
         # error handler to build url for resources on cdn.
         # refer to https://github.com/pallets/flask/issues/785
-        if not re.match(r'.*\.static', endpoint):
+        # if not re.match(r'.*\.static', endpoint):
+        #     return
+        if endpoint != 'main.static':
             return
         filename = values.pop('filename')
         # Ignore _external flag, we're always external
         values.pop('_external', None)
         cdn_url = config[config_name].CDN_URL
-        return 'http://%s/static/%s' % (
+        if cdn_url:
+            cdn_url = 'http://'+ cdn_url
+        return '%s/static/%s' % (
             cdn_url,
             filename
         )
