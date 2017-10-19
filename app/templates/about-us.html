@@ -21,24 +21,24 @@
                 <p>我们相信，将强大的知识资源与灵活稳健的体系有机融合，将新思路转化为新成就，一定能够创造出科技翻译行业的新天地！</p>
             </div>
             <div class="pictures text-center">
-                <img src="{{ url_for('static', filename='media/other-pics/about-us-1.jpg') }}">
-                <img src="{{ url_for('static', filename='media/other-pics/about-us-2.jpg') }}">
+                <img src="{{ url_for('.static', filename='media/other-pics/about-us-1.jpg') }}">
+                <img src="{{ url_for('.static', filename='media/other-pics/about-us-2.jpg') }}">
             </div>
             <h1 class="text-center title">联系我们</h1>
             <div class="seperator-line text-center">
-                <img src="{{ url_for('static', filename='media/other-pics/yellow-short-seperator-line.png') }}">
+                <img src="{{ url_for('.static', filename='media/other-pics/yellow-short-seperator-line.png') }}">
             </div>
             <div class="contact-info text-center">
                 <div class="contact-info-block">
-                    <img src="{{ url_for('static', filename='media/other-pics/about-us-icon-1.png') }}">
+                    <img src="{{ url_for('.static', filename='media/other-pics/about-us-icon-1.png') }}">
                     <p>联系电话 : 400-658-2018<br />值班电话：132-61753772</p>
                 </div>
                 <div class="contact-info-block">
-                    <img src="{{ url_for('static', filename='media/other-pics/about-us-icon-2.png') }}">
+                    <img src="{{ url_for('.static', filename='media/other-pics/about-us-icon-2.png') }}">
                     <p>公司地址：北京市海淀区知春路111号理想大厦1904室</p>
                 </div>
                 <div class="contact-info-block">
-                    <img src="{{ url_for('static', filename='media/other-pics/about-us-icon-2.png') }}">
+                    <img src="{{ url_for('.static', filename='media/other-pics/about-us-icon-2.png') }}">
                     <p>联系邮箱：<br />caiyubin2017@icloud.com</p>
                 </div>
                 <div class="location-map">
@@ -56,6 +56,6 @@
 {% block scripts %}
     {{ super() }}
     <script type='text/javascript' src='http://api.map.baidu.com/getscript?v=2.0&ak=BPPrdn0rN6iz2l1o97PohYt2Q7aOT9lW&services=&t=20170912191900'></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mousewheel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/jquery.mousewheel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/map.js') }}"></script>
 {% endblock %}

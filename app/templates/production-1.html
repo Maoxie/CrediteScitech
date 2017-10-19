@@ -70,10 +70,10 @@
             </p>
         </div>
         <div class="pictures">
-                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-1.jpg') }}"></div>
-                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-6.jpg') }}"></div>
-                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-2.jpg') }}"></div>
-                <div class="picture-container small"><img src="{{ url_for('static', filename='media/index/in-content-3-5.jpg') }}"></div>
+                <div class="picture-container small"><img src="{{ url_for('.static', filename='media/index/in-content-3-1.jpg') }}"></div>
+                <div class="picture-container small"><img src="{{ url_for('.static', filename='media/index/in-content-3-6.jpg') }}"></div>
+                <div class="picture-container small"><img src="{{ url_for('.static', filename='media/index/in-content-3-2.jpg') }}"></div>
+                <div class="picture-container small"><img src="{{ url_for('.static', filename='media/index/in-content-3-5.jpg') }}"></div>
         </div>
     </div>
 </section>
@@ -86,7 +86,7 @@
                 我们的服务服务语言包括但不仅限于英、日、韩、俄、法、德、意、阿拉伯等八种常用外语，更多语言请详询客服
             </p>
         </div>
-        <img class="pic-1" src="{{ url_for('static', filename='media/other-pics/in-production-1-languages.png') }}">
+        <img class="pic-1" src="{{ url_for('.static', filename='media/other-pics/in-production-1-languages.png') }}">
     </div>
 </section>
 <section class="container-fluid production-1 other-section-4">
@@ -95,7 +95,7 @@
             <div class="in-content-title"><b>科技文献翻译服务价格</b></div>
             <div class="in-content-subtitle">PRICE</div>
         </div>
-        <img class="pic-1" src="{{ url_for('static', filename='media/price/price-science-literature.png') }}">
+        <img class="pic-1" src="{{ url_for('.static', filename='media/price/price-science-literature.png') }}">
     </div>
 </section>
 {% endblock %}

@@ -58,13 +58,13 @@
                     <div class="passage">
                         <h2 class="passage-title">专业优势</h2>
                         <div class="passage-content">
-                            <img src="{{ url_for('static', filename='media/profession/advantage-1.png') }}">
+                            <img src="{{ url_for('.static', filename='media/profession/advantage-1.png') }}">
                         </div>
                     </div>
                     <div class="passage">
                         <h2 class="passage-title">优质服务</h2>
                         <div class="passage-content text-center">
-                            <img src="{{ url_for('static', filename='media/profession/service.png') }}"
+                            <img src="{{ url_for('.static', filename='media/profession/service.png') }}"
                                  style="width: 620px">
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                         <h2 class="passage-title">翻译案例</h2>
                         <div class="passage-content text-center">
                             <div class="example-img">
-                                <img src="{{ url_for('static', filename=('media/profession/'+content['example']["image"])) }}">
+                                <img src="{{ url_for('.static', filename=('media/profession/'+content['example']["image"])) }}">
                             </div>
                             <div class="example-title">{{ content['example']["title"] }}</div>
                             <a href={{ content['example']["href"] }}>
