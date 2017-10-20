@@ -7,18 +7,24 @@ $('.with-menu').bind({
 });
 function showMenu(e){
     let menu = $(this).find('.navbar-menu');
-    console.info("bark")
     if (!menu) { return; }
     menu.css({
-        "visibility": 'visible'
+        "height": "0px",
+        "opacity": "0",
+        "display": "block"
+    });
+    menu.animate({
+        "height": "300px",
+        "opacity": "1"
     });
 }
 function hideMenu(e){
     let menu = $(this).find('.navbar-menu');
     if (!menu) { return; }
-    menu.css({
-        "visibility": 'hidden'
-    });
+    // menu.css({
+    //     "visibility": 'hidden'
+    // });
+    menu.fadeOut();
 }
 $(document).ready(function(){
     back_button = $("#back-to-top-button");

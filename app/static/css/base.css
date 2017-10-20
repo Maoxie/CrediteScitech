@@ -121,7 +121,7 @@ p{ margin: 0px; }
     background-color: #ffc001;
 }
 #header-navibar .navbar-menu{
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 39px;
     left: -200px;
