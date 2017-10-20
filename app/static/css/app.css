@@ -465,10 +465,13 @@
     margin-right: 10px;
 }
 #org-logos{
+    position: relative;
     height: 144px;
 }
 #org-logos .org-logos{
-    margin-top: 25px;
+    position: absolute;
+    top: 25px;
+    z-index: -1;
 }
 #org-logos img{
     height: 90px;
