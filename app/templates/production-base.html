@@ -1,6 +1,8 @@
 {#production base#}
 {% extends "base.html" %}
 
+{% block level_1_index %}3{% endblock %}
+
 {% block styles %}
     {{ super() }}
     <link type="text/css" href="{{ url_for('static', filename='css/productions.css', _external=True) }}" rel="stylesheet">

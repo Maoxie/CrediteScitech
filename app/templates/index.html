@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block level_1_index %}1{% endblock %}
+
 {% block detail %}
 <div id="index-contents">
     <section class="container-fluid" id="carousel">
@@ -76,7 +78,7 @@
     </section>
     <section class="container-fluid" id="index-content-1">
         <div class="content-inner">
-            <div class="paragraph-1">
+            <div class="paragraph-1 float-up">
                 <div style="height: 31px;">
                     <div class="in-content-title">我们为您提供最专业的科技翻译</div>
                 </div>
@@ -84,10 +86,13 @@
                     <div class="in-content-subtitle">OUR SERVICE</div>
                 </div>
                 <div style="height: 70px;">
-                    <div class="p1">启信科技是由清华人创建的专业科技翻译公司，我们整合清华大学强大的人才资源，特聘外籍语言专家顾问，并将他们与灵活稳健的管理体系相融合，打造业内最顶级的科技翻译公司，提供最专业的科技翻译服务</div>
+                    <div class="p1">启信科技是由清华人创建的专业科技翻译公司，我们整合清华大学强大的人才资源，
+                        特聘外籍语言专家顾问，并将他们与灵活稳健的管理体系相融合，打造业内最顶级的科技翻译公司，
+                        提供最专业的科技翻译服务
+                    </div>
                 </div>
             </div>
-            <div class="block-1">
+            <div class="block-1 float-up">
                 <a href="">
                     <div class="content-1-logo logo-1"></div>
                     <div class="in-content-1-block">
@@ -96,7 +101,7 @@
                     </div>
                 </a>
             </div>
-            <div class="block-2">
+            <div class="block-2 float-up">
                 <a href="">
                     <div class="content-1-logo logo-2"></div>
                     <div class="in-content-1-block">
@@ -105,7 +110,7 @@
                     </div>
                 </a>
             </div>
-            <div class="block-3">
+            <div class="block-3 float-up">
                 <a href="">
                     <div class="content-1-logo logo-3"></div>
                     <div class="in-content-1-block">
@@ -114,7 +119,7 @@
                     </div>
                 </a>
             </div>
-            <div class="block-4">
+            <div class="block-4 float-up">
                 <a href="">
                     <div class="content-1-logo logo-4"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-1-4.png') }}"></div>
                     <div class="in-content-1-block">
@@ -127,39 +132,39 @@
     </section>
     <section class="container-fluid" id="index-content-2">
         <div class="content-inner">
-            <div class="title-container text-right">
+            <div class="title-container text-right  float-up">
                 <h1 class="in-content-title">专业优势</h1>
                 <p class="in-content-subtitle">PROFESSIONAL ADVANTAGES</p>
             </div>
             <table class="content-table">
                 <thead>
                 <tr>
-                    <th class="left-col">启信科技</th>
+                    <th class="left-col float-up">启信科技</th>
                     <th class="center-col"></th>
-                    <th class="right-col">通用翻译公司</th>
+                    <th class="right-col float-up">通用翻译公司</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr style="height: 22px"></tr>
                 <tr>
-                    <td class="left-col">专门科技数据库，收录中外文献超10万篇</td>
+                    <td class="left-col float-up">专门科技数据库，收录中外文献超10万篇</td>
                     <td class="center-col"><div class="in-center-col-block text-center yellow-bk">数据库</div></td>
-                    <td class="right-col">无专门数据库</td>
+                    <td class="right-col float-up">无专门数据库</td>
                 </tr>
                 <tr>
-                    <td class="left-col">背靠清华，科技人才丰富</td>
+                    <td class="left-col float-up">背靠清华，科技人才丰富</td>
                     <td class="center-col"><div class="in-center-col-block text-center yellow-bk">人才库</div></td>
-                    <td class="right-col">专者不多</td>
+                    <td class="right-col float-up">专者不多</td>
                 </tr>
                 <tr>
-                    <td class="left-col">翻译团队硕博学历占65%</td>
+                    <td class="left-col float-up">翻译团队硕博学历占65%</td>
                     <td class="center-col"><div class="in-center-col-block text-center yellow-bk">专业性</div></td>
-                    <td class="right-col">多者不专</td>
+                    <td class="right-col float-up">多者不专</td>
                 </tr>
                 <tr>
-                    <td class="left-col">覆盖八大领域，超过100个细分学科</td>
+                    <td class="left-col float-up">覆盖八大领域，超过100个细分学科</td>
                     <td class="center-col"><div class="in-center-col-block text-center yellow-bk">全面性</div></td>
-                    <td class="right-col">找不到对口专业人才</td>
+                    <td class="right-col float-up">找不到对口专业人才</td>
                 </tr>
                 </tbody>
             </table>
@@ -167,24 +172,24 @@
     </section>
     <section class="container-fluid" id="index-content-3">
         <div class="content-inner">
-            <div class="paragraph-1">
+            <div class="paragraph-1 float-up">
                 <div class="in-content-title">学科领域</div>
                 <div class="in-content-subtitle">DISCIPLINES</div>
                 <div class="p1">我们的服务领域以理工科为主，涵盖医学医药、机械电子、物理数学、化学化工、环境工程、核能核电、信息技术、生命科学等八大领域</div>
             </div>
             <div class="pictures">
-                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-1.jpg') }}"></div>
-                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-2.jpg') }}"></div>
-                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-3.jpg') }}"></div>
-                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-4.jpg') }}"></div>
-                <div class="picture-container big"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-5.jpg') }}"></div>
-                <div class="picture-container big"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-6.jpg') }}"></div>
+                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-1.jpg') }}"></div>
+                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-2.jpg') }}"></div>
+                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-3.jpg') }}"></div>
+                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-4.jpg') }}"></div>
+                <div class="picture-container big float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-5.jpg') }}"></div>
+                <div class="picture-container big float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-6.jpg') }}"></div>
             </div>
         </div>
     </section>
     <section class="container-fluid" id="index-content-4">
         <div class="content-inner">
-            <div class="passage-1">
+            <div class="passage-1 float-up">
                 <div class = "title">
                     <p>用翻译提升学术价值</p>
                     <p>为您提供一站式科技翻译服务！</p>
@@ -200,37 +205,37 @@
             <div class="passage-2">
                 <div class="blocks">
                     <div class="block block-1">
-                        <div class="block-logo">
+                        <div class="block-logo float-up">
                             <img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-4-1.png') }}">
                         </div>
-                        <div class="text">
+                        <div class="text float-up">
                             <div class="block-title">精确匹配译者</div>
                             <div class="block-passage">确定文件专业领域后，我们会在译者库中精确匹配对应专业的译者，最高可选择博士研究生</div>
                         </div>
                     </div>
                     <div class="block block-2">
-                        <div class="block-logo">
+                        <div class="block-logo float-up">
                             <img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-4-2.png') }}">
                         </div>
-                        <div class="text">
+                        <div class="text float-up">
                             <div class="block-title">钻石级润色质量</div>
                             <div class="block-passage">百分百由母语专家组成专业编辑团队，深度润色，修正语法与专业错误，纠正Chinglish表达</div>
                         </div>
                     </div>
                     <div class="block block-3">
-                        <div class="block-logo">
+                        <div class="block-logo float-up">
                             <img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-4-3.png') }}">
                         </div>
-                        <div class="text">
+                        <div class="text float-up">
                             <div class="block-title">规范的保密体系</div>
                             <div class="block-passage">原文交给我们之前我们会要求客户删除关键数据和图表，我们与译者之间更会签订保密协议，百分百杜绝泄密</div>
                         </div>
                     </div>
                     <div class="block block-4">
-                        <div class="block-logo">
+                        <div class="block-logo float-up">
                             <img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-4-4.png') }}">
                         </div>
-                        <div class="text">
+                        <div class="text float-up">
                             <div class="block-title">百分百免费售后</div>
                             <div class="block-passage">论文交付前随时与客户保持沟通，了解并反馈客户不同的需求，交付后，百分百免费返修</div>
                         </div>
@@ -241,11 +246,11 @@
     </section>
     <section class="container-fluid" id="index-content-5">
         <div class="content-inner">
-            <div class="title-block text-center">
+            <div class="title-block text-center float-up">
                 <div class="in-content-title">案例简介</div>
                 <div class="in-content-subtitle">CASES</div>
             </div>
-            <div class="blocks">
+            <div class="blocks float-up">
                 <div class="block text-center">
                     <a href="">
                         <img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-5-1.jpg') }}">
@@ -285,4 +290,5 @@
 {% block scripts %}
     {{ super() }}
     <script type="text/javascript" src="{{ url_for('.static', filename='js/carousel.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/index.js') }}"></script>
 {% endblock %}

@@ -16,7 +16,7 @@ function showMenu(e){
     menu.animate({
         "height": "300px",
         "opacity": "1"
-    });
+    },250);
 }
 function hideMenu(e){
     let menu = $(this).find('.navbar-menu');
@@ -27,7 +27,7 @@ function hideMenu(e){
     menu.fadeOut();
 }
 $(document).ready(function(){
-    back_button = $("#back-to-top-button");
+    let back_button = $("#back-to-top-button");
     back_button.hide();//隐藏go to top按钮
     $(function(){
         $(window).scroll(function(){
@@ -43,7 +43,11 @@ $(document).ready(function(){
         $("html,body").animate({scrollTop:0}, 200);//点击按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
         return false;
     });
-});
-$('#header-navibar').onload(function(){
-    // TODO: change navbar active status
+    // 根据当前页面，改变navibar的高亮
+    let current_page = eval($('#level-1-index').html()) || 0;
+    $('#header-navibar').find('.navbar-button').each(function (i) {
+        if (eval($(this).attr('data-index')) === current_page) {
+            $(this).addClass('active');
+        }
+    });
 });
