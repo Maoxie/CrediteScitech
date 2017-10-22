@@ -1,7 +1,6 @@
 /**
  * Created by yzt on 2017/10/20.
  */
-// let float_up_items = $(".float-up");
 $(document).ready(function() {
     $(".float-up").css({
         "opacity": "0"
@@ -24,7 +23,7 @@ $(window).scroll(function() {
             $(this).animate({
                 "opacity": "1",
                 "top": this_top
-            }, 1000);
+            }, 600);
             $(this).removeClass("float-up");
         }
     })

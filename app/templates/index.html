@@ -177,13 +177,15 @@
                 <div class="in-content-subtitle">DISCIPLINES</div>
                 <div class="p1">我们的服务领域以理工科为主，涵盖医学医药、机械电子、物理数学、化学化工、环境工程、核能核电、信息技术、生命科学等八大领域</div>
             </div>
-            <div class="pictures">
-                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-1.jpg') }}"></div>
-                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-2.jpg') }}"></div>
-                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-3.jpg') }}"></div>
-                <div class="picture-container small float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-4.jpg') }}"></div>
-                <div class="picture-container big float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-5.jpg') }}"></div>
-                <div class="picture-container big float-up"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-6.jpg') }}"></div>
+            <div class="pictures small float-up">
+                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-1.jpg') }}"></div>
+                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-2.jpg') }}"></div>
+                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-3.jpg') }}"></div>
+                <div class="picture-container small"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-4.jpg') }}"></div>
+            </div>
+            <div class="pictures big float-up">
+                <div class="picture-container big"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-5.jpg') }}"></div>
+                <div class="picture-container big"><img class="lazy" src="{{ url_for('.static', filename='media/index/in-content-3-6.jpg') }}"></div>
             </div>
         </div>
     </section>
@@ -290,5 +292,5 @@
 {% block scripts %}
     {{ super() }}
     <script type="text/javascript" src="{{ url_for('.static', filename='js/carousel.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('.static', filename='js/index.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/float-up.js') }}"></script>
 {% endblock %}

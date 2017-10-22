@@ -20,6 +20,7 @@ a:active{ text-decoration: none; }
 a{ color: inherit; }
 p{ margin: 0px; }
 
+.red{ color: red; }
 .yellow-bk{ background: #ffc001; }
 .content-inner{
     position: relative;

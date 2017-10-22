@@ -51,3 +51,9 @@ $(document).ready(function(){
         }
     });
 });
+$(".a-upload").on("change","input[type='file']",function(){
+    let filePath=$(this).val();
+    let arr=filePath.split('\\');
+    let fileName=arr[arr.length-1];
+    $(".file-upload-hint").html(fileName);
+});
