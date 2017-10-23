@@ -50,6 +50,12 @@ p{ margin: 0px; }
    -ms-user-select: none;
    user-select: none;
 }
+.hover-zoom-in{
+    height: 100%;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+}
 
 #header-div{
     position: relative;

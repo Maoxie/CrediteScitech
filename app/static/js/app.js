@@ -57,3 +57,46 @@ $(".a-upload").on("change","input[type='file']",function(){
     let fileName=arr[arr.length-1];
     $(".file-upload-hint").html(fileName);
 });
+$(document).ready(function () {
+    $(".hover-zoom-in").each(function (e) {
+        let TOP = $(this).position().top;
+        let LEFT = $(this).position().left;
+        let WIDTH = $(this).width();
+        let HEIGHT = $(this).height();
+        let FONTSIZE = parseInt($(this).css("font-size"));
+        let LINEHEIGHT = parseInt($(this).css("line-height"));
+        $(this).css({
+            "position": "absolute",
+            "top": TOP,
+            "left": LEFT
+        });
+        $(this).parent().css({
+            "overflow": "hidden",
+            "position": "relative",
+            "padding": 0
+        });
+        let DELTA = 50;
+        let SCALE = 1 + DELTA/HEIGHT;
+        let INTERVAL = 250;
+        $(this).hover(function () {
+                $(this).animate({
+                    "width": WIDTH * SCALE,
+                    "height": HEIGHT * SCALE,
+                    "font-size": FONTSIZE * SCALE,
+                    "line-height": LINEHEIGHT  * SCALE,
+                    "top": TOP - (SCALE-1)/2.0*$(this).height(),
+                    "left": LEFT - (SCALE-1)/2.0*$(this).width()
+                }, INTERVAL);
+                console.log(FONTSIZE)
+            }, function () {
+                $(this).animate({
+                    "width": WIDTH,
+                    "height": HEIGHT,
+                    "font-size": FONTSIZE,
+                    "line-height": LINEHEIGHT,
+                    "top": TOP,
+                    "left": LEFT
+                }, INTERVAL);
+            });
+    });
+});

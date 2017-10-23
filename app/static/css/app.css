@@ -150,14 +150,22 @@
     line-height: 32px;
 }
 #index-content-1 .content-1-logo{
+    position: relative;
     float: left;
-    font-family: 'icomoon'!important;
     height: 68px;
-    margin: 0px;
     width: 68px;
     font-size: 68px;
     color: #ffc02e;
     line-height: 68px;
+    text-align: center;
+}
+#index-content-1 .content-1-logo img{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 #index-content-1 .in-content-1-block{
     float: left;
@@ -171,19 +179,6 @@
 #index-content-1 .in-content-1-block .block-body{
     font-size: 13px;
     line-height: 26px;
-}
-#index-content-1 .logo-1:before{
-    content: "\e9dd";
-}
-#index-content-1 .logo-2:before{
-    content: "\ea10";
-}
-#index-content-1 .logo-3:before{
-    content: "\eaa1";
-}
-#index-content-1 .logo-4 img{
-    top: 0px;
-    vertical-align: top;
 }
 #index-content-1 .block-1{
     position: absolute;
@@ -299,14 +294,23 @@
     height: auto;
 }
 #index-content-3 .picture-container{
+    position: relative;
     display: inline-block;
     margin-right: 11px;
 }
-#index-content-3 .pictures.small img{
+#index-content-3 .picture-container.small{
     width: 181px;
     height: 129px;
 }
-#index-content-3 .pictures.big img{
+#index-content-3 .picture-container.small img{
+    width: 181px;
+    height: 129px;
+}
+#index-content-3 .picture-container.big{
+    width: 376px;
+    height: 249px;
+}
+#index-content-3 .picture-container.big img{
     width: 376px;
     height: 249px;
 }
@@ -684,7 +688,6 @@
     position: absolute;
     top:0px;
     left: 0px;
-    font-family: icomoon;
     font-size: 39px;
     line-height: 35px;
 }
