@@ -800,7 +800,7 @@
     width: 14px;
     height: 14px;
 }
-#customer-file-upload-form form button[type="submit"]{
+#customer-file-upload-form form input[type="submit"]{
     position: absolute;
     left: 162px;
     width: 230px;

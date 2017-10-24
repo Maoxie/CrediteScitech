@@ -5,9 +5,11 @@ __date__ = '2017/9/13 21:30'
 from datetime import datetime
 from flask import render_template, session, redirect, url_for
 from jinja2 import exceptions as JException
+from flask_wtf import Form
 
 from . import main
 from . import init_data
+from . import forms
 #from .forms import ##TODO
 from .. import db
 #from ..models import ##TODO
@@ -15,7 +17,8 @@ from .. import db
 
 @main.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    form = forms.MainCustomerUploadFileForm()
+    return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
 
 
 @main.route('/profession/<int:pid>', methods=['GET'])
@@ -52,4 +55,24 @@ def qc():
 
 @main.route('/about', methods=['GET'])
 def about():
-    return render_template('about-us.html')
+    form = forms.MainCustomerUploadFileForm()
+    return render_template('about-us.html', form=form, customerInfo=session.get('customerInfo'))
+
+
+@main.route('/upload-file', methods=['GET', 'POST'])
+def upload_file():
+    form = forms.MainCustomerUploadFileForm()
+    if form.validate_on_submit():
+        customerName = form.customerName.data
+        customerPhoneNumber = form.customerPhoneNumber.data
+        customerEmail = form.customerEmail.data
+        uploadFile = form.uploadFile.data
+        # TODO: save file
+        customerInfo = {
+            'customerName': customerName,
+            'customerPhoneNumber': customerPhoneNumber,
+            'customerEmail': customerEmail
+        }
+        session['customerInfo'] = customerInfo
+        return redirect(url_for('main.index'))
+    return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
