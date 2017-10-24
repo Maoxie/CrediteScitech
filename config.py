@@ -21,11 +21,13 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
+    UPLOAD_FILES_PATH = os.path.join(basedir, 'customer_upload')
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+    UPLOAD_FILES_PATH = os.getenv('CREDITE_UPLOAD_FILES_PATH')
 
 
 config = {
