@@ -87,7 +87,6 @@ $(document).ready(function () {
                     "top": TOP - (SCALE-1)/2.0*$(this).height(),
                     "left": LEFT - (SCALE-1)/2.0*$(this).width()
                 }, INTERVAL);
-                console.log(FONTSIZE)
             }, function () {
                 $(this).animate({
                     "width": WIDTH,

@@ -1,0 +1,28 @@
+{# promotion-1 首单七折 #}
+{% extends "base.html" %}
+
+{% block level_1_index %}0{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block detail %}
+    <section id="promotion-banner" class="container-fluid banner-2"></section>
+    <section id="promotion-content" class="container">
+        <div class="contents">
+            <div class="title text-center">
+                <h1 class="in-content-title"><b>首单七折活动规则</b></h1>
+            </div>
+            <div class="passage">
+                <p><span class="red">#</span> 首单七折优惠活动仅限一般性科技文献翻译，不包括英语论文翻译、润色、编校，不包括专利文件、技术标书、工程图纸</p>
+                <p><span class="red">#</span> 首单七折优惠仅限万字以内文献，超过万字的文件享受字数折扣优惠，详细报价咨询客服</p>
+                <p><span class="red">#</span> 首单七折优惠仅限新客户</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}

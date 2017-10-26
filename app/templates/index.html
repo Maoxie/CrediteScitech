@@ -43,13 +43,13 @@
                         </div>
                     </div>
                     <div class="in-carousel-buttons">
-                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="{{ url_for('.promotion', pid=1) }}" role="button">
                             免费试译
                         </a>
-                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="{{ url_for('.promotion', pid=2) }}" role="button">
                             首单七折
                         </a>
-                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="{{ url_for('.promotion', pid=3) }}" role="button">
                             交稿付费
                         </a>
                     </div>
@@ -62,7 +62,7 @@
                         <strong>——</strong> 全程服务为学术精英开启走向世界的大门 <strong>——</strong>
                     </div>
                     <div class="p2 text-center">
-                        <a class="text-center in-carousel-button yellow-transparent-bk" href="" role="button">
+                        <a class="text-center in-carousel-button yellow-transparent-bk" href="{{ url_for('.production', pid=5) }}" role="button">
                             即刻开启
                         </a>
                     </div>
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="block-1 float-up">
-                <a href="">
+                <a href="{{ url_for('.production', pid=1) }}">
                     <div class="content-1-logo icon">
                         <div class="hover-zoom-in">&#xe9dd;</div>
                     </div>
@@ -104,7 +104,7 @@
                 </a>
             </div>
             <div class="block-2 float-up">
-                <a href="">
+                <a href="{{ url_for('.production', pid=5) }}">
                     <div class="content-1-logo icon">
                         <div class="hover-zoom-in">&#xea10;</div>
                     </div>
@@ -115,7 +115,7 @@
                 </a>
             </div>
             <div class="block-3 float-up">
-                <a href="">
+                <a href="{{ url_for('.production', pid=3) }}">
                     <div class="content-1-logo icon">
                         <div class="hover-zoom-in">&#xeaa1;</div>
                     </div>
@@ -126,7 +126,7 @@
                 </a>
             </div>
             <div class="block-4 float-up">
-                <a href="">
+                <a href="{{ url_for('.production', pid=2) }}">
                     <div class="content-1-logo icon">
                         <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-1-4.png') }}">
                     </div>
@@ -186,26 +186,38 @@
                 <div class="p1">我们的服务领域以理工科为主，涵盖医学医药、机械电子、物理数学、化学化工、环境工程、核能核电、信息技术、生命科学等八大领域</div>
             </div>
             <div class="pictures small float-up">
-                <div class="picture-container small">
-                    <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-1.jpg') }}">
-                </div>
-                <div class="picture-container small">
-                    <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-2.jpg') }}">
-                </div>
-                <div class="picture-container small">
-                    <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-3.jpg') }}">
-                </div>
-                <div class="picture-container small">
-                    <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-4.jpg') }}">
-                </div>
+                <a href="{{ url_for('main.production', pid=1) }}">
+                    <div class="picture-container small">
+                        <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-1.jpg') }}">
+                    </div>
+                </a>
+                <a href="{{ url_for('main.production', pid=2) }}">
+                    <div class="picture-container small">
+                        <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-2.jpg') }}">
+                    </div>
+                </a>
+                <a href="{{ url_for('main.production', pid=5) }}">
+                    <div class="picture-container small">
+                        <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-3.jpg') }}">
+                    </div>
+                </a>
+                <a href="{{ url_for('main.production', pid=8) }}">
+                    <div class="picture-container small">
+                        <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-4.jpg') }}">
+                    </div>
+                </a>
             </div>
             <div class="pictures big float-up">
-                <div class="picture-container big">
-                    <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-5.jpg') }}">
-                </div>
-                <div class="picture-container big">
-                    <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-6.jpg') }}">
-                </div>
+                <a href="{{ url_for('main.production', pid=6) }}">
+                    <div class="picture-container big">
+                        <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-5.jpg') }}">
+                    </div>
+                </a>
+                <a href="{{ url_for('main.production', pid=4) }}">
+                    <div class="picture-container big">
+                        <img class="lazy hover-zoom-in" src="{{ url_for('.static', filename='media/index/in-content-3-6.jpg') }}">
+                    </div>
+                </a>
             </div>
         </div>
     </section>

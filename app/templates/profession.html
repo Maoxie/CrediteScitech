@@ -49,7 +49,7 @@
                                         <span class="title"><b>{{ item['title'] }}</b></span>
                                     </div>
                                     <div class="advantage-text">
-                                        <a href={{ item['href'] }}>
+                                        <a href="{{ url_for('main.profession_sub', pid=current_page, subpid=loop.index) }}">
                                             {{ item['description'] }}
                                         </a>
                                     </div>

@@ -1,0 +1,29 @@
+{# promotion-1 免费试译 #}
+{% extends "base.html" %}
+
+{% block level_1_index %}0{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block detail %}
+    <section id="promotion-banner" class="container-fluid banner-2"></section>
+    <section id="promotion-content" class="container">
+        <div class="contents">
+            <div class="title text-center">
+                <h1 class="in-content-title"><b>免费试译规则</b></h1>
+            </div>
+            <div class="passage">
+                <p><span class="red">#</span><b> 免费试译客户类型</b>为首次合作客户和开始新翻译类型的老客户</p>
+                <p><span class="red">#</span><b> 免费试译文件类型</b>为普通科技文献、技术标书、专利文件以及中国专家润色的英语论文，不包括图纸、外籍专家润色的英语论文</p>
+                <p><span class="red">#</span><b> 免费试译字数</b>为5000字以上文件300字，10000字以上文件500字，5万字以上文件1000字，长期合作企业客户首份文件（不超过3000字）可以完全免费试译</p>
+                <p><span class="red">#</span><b> 免费试译承诺：</b>原则上试译与正式翻译使用同一译者，同一标准，若文件量较大，我们仍保证使用同一水平译者，100%保证试译与正式翻译质量一致</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}

@@ -21,9 +21,17 @@ def index():
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
 
 
+@main.route('/profession-sub/<int:pid>/<int:subpid>', methods=['GET'])
+def profession_sub(pid, subpid):
+    template = 'profession-sub/profession-{pid}-sub/profession-{pid}-{subpid}.html'.format(pid=pid, subpid=subpid)
+    try:
+        return render_template(template)
+    except JException.TemplateNotFound, e:
+        return render_template('404.html')
+
+
 @main.route('/profession/<int:pid>', methods=['GET'])
 def profession(pid):
-    # TODO: get from db
     # pid starts from 1
     try:
         content = init_data.professions[pid-1]
@@ -57,6 +65,15 @@ def qc():
 def about():
     form = forms.MainCustomerUploadFileForm()
     return render_template('about-us.html', form=form, customerInfo=session.get('customerInfo'))
+
+
+@main.route('/promotion/<int:pid>', methods=['GET'])
+def promotion(pid):
+    template = 'promotion/promotion-{0}.html'.format(pid)
+    try:
+        return render_template(template)
+    except JException.TemplateNotFound, e:
+        return render_template('404.html')
 
 
 @main.route('/upload-file', methods=['GET', 'POST'])

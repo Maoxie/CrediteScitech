@@ -169,4 +169,9 @@ p{ margin: 0px; }
     background-color: #252525;
 }
 #footer a{ color: #a6a6a6 }
+#footer a:hover{ color: black}
+#footer .img-1{
+    left: auto;
+    right: auto;
+}
 

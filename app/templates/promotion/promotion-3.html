@@ -1,0 +1,29 @@
+{# promotion-1 交稿付费 #}
+{% extends "base.html" %}
+
+{% block level_1_index %}0{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block detail %}
+    <section id="promotion-banner" class="container-fluid banner-2"></section>
+    <section id="promotion-content" class="container">
+        <div class="contents">
+            <div class="title text-center">
+                <h1 class="in-content-title"><b>先翻译后付费活动规则</b></h1>
+            </div>
+            <div class="passage">
+                <p><span class="red">#</span> 所有老客户，都可以不用支付任何定金直接翻译，验收确认后再付款</p>
+                <p><span class="red">#</span> 新企业客户首月只需支付2000元押金就可以完全享受先翻译后付费服务，而且钱款可以月结，第一次结算时押金将全额退还</p>
+                <p><span class="red">#</span> 其他类型新客户只需支付50%的翻译款就可以享受先翻译后付费服务</p>
+                <p><span class="red">#</span> 翻译前一次性付清费用的新老客户在已有优惠的基础上可再享受5%折扣</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
