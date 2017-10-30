@@ -1,0 +1,119 @@
+{#翻译案例-英语论文翻译#}
+{% extends "base.html" %}
+
+{% block level_1_index %}5{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block detail %}
+    <section id="example-banner" class="container-fluid banner-3"></section>
+    <section id="example-content" class="container">
+        <table class="layout-table"><tr>
+            <td class="sidebar-navigation">
+                <div class="nav-header"><span>案例导航</span></div>
+                <div class="nav-items">
+                    <a href="{{ url_for('main.examples', pid=1) }}">
+                        <div class="nav-item"><span>案例简介-文献翻译</span></div>
+                    </a>
+                    <div class="seperator-line"></div>
+                    <div class="nav-item active"><span>案例简介-英语论文翻译</span></div>
+                    <div class="seperator-line"></div>
+                    <a href="{{ url_for('main.examples', pid=3) }}">
+                        <div class="nav-item"><span>案例简介-技术标书翻译</span></div>
+                    </a>
+                    <div class="seperator-line"></div>
+                    <a href="{{ url_for('main.examples', pid=4) }}">
+                        <div class="nav-item"><span>案例展示-其他案例</span></div>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="contents">
+                    <div class="title text-center">
+                        <h1 class="in-content-title"><b>翻译案例-英语论文翻译</b></h1>
+                    </div>
+                    <div style="height: 50px;"></div>
+                    <table id="examples-table">
+                        <tr class="table-title"><td colspan="4">科技文献翻译案例下载</td></tr>
+                        <tr class="row">
+                            <td class="name">学历公证及认证-EN.docx</td>
+                            <td class="size">934.41KB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/学历公证及认证-EN.docx') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">学历公证及认证.docx</td>
+                            <td class="size">383.88KB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/学历公证及认证.docx') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">无犯罪记录证明公证及认证-EN.docx</td>
+                            <td class="size">1.22MB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/无犯罪记录证明公证及认证-EN.docx') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">无犯罪记录证明公证及认证.docx</td>
+                            <td class="size">349.85KB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/无犯罪记录证明公证及认证.docx') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">体检2-EN.pdf</td>
+                            <td class="size">2.36MB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/体检2-EN.pdf') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">体检2.pdf</td>
+                            <td class="size">528.1KB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/体检2.pdf') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">简历-EN.docx</td>
+                            <td class="size">15.82KB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/简历-EN.docx') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">简历.docx</td>
+                            <td class="size">18.06KB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/简历.docx') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">TEFL教师资格公证及认证-EN.docx</td>
+                            <td class="size">1.33MB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/TEFL教师资格公证及认证-EN.docx') }}">下载</a>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="name">TEFL教师资格公证及认证.pdf</td>
+                            <td class="size">578.86KB</td>
+                            <td class="download-link">
+                                <a href="{{ url_for('static', filename='files/examples/TEFL教师资格公证及认证.pdf') }}">下载</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td></tr>
+        </table>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}

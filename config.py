@@ -21,7 +21,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
-    UPLOAD_FILES_PATH = os.path.join(basedir, 'customer_upload')
+    UPLOAD_FILES_PATH = os.path.join(basedir, '/app/static/customer_upload')
 
 
 class ProductionConfig(Config):

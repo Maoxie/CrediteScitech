@@ -93,3 +93,12 @@ def upload_file():
         session['customerInfo'] = customerInfo
         return redirect(url_for('main.index'))
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
+
+
+@main.route('/examples/<int:pid>', methods=['GET'])
+def examples(pid):
+    template = 'examples-{0}.html'.format(pid)
+    try:
+        return render_template(template)
+    except JException.TemplateNotFound, e:
+        return render_template('404.html')

@@ -500,6 +500,13 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
+.banner-3{
+    height: 500px;
+    background-image: url('../media/other-pics/banner-3.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
 #qc .content-inner{
     width: 820px;
     margin-left: 230px;
@@ -827,4 +834,95 @@
     font-size: 16px;
     line-height: 30px;
     color: rgb(102, 102, 102);
+}
+#example-content{
+    position: relative;
+    margin: auto auto;
+    left: auto;
+    right: auto;
+    padding: 20px 0;
+}
+#example-content .layout-table{
+    width: 100%;
+    min-width: 1150px;
+}
+#example-content .sidebar-navigation{
+    width: 230px;
+    vertical-align: top;
+}
+#example-content .nav-header{
+    height: 60px;
+    line-height: 60px;
+    font-family: SimHei;
+    font-size: 18px;
+    color: black;
+    background: rgb(255, 192, 1);
+}
+#example-content .nav-header span{
+    padding: 8px;
+}
+#example-content .nav-items{
+    color: #b3b3b3;
+    background: rgb(31, 31, 31);
+    padding: 5px;
+    cursor: default;
+}
+#example-content .nav-item{
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+}
+#example-content .nav-item.active,
+#example-content .nav-item:hover{
+    color: #ffc001;
+}
+#example-content .nav-item span{
+    padding: 7px 10px;
+}
+#example-content .nav-items .seperator-line{
+    height: 0;
+    width: 100%;
+    border-bottom: dashed rgb(101, 101, 101) 1px;
+}
+#example-content .contents{
+    margin: 30px;
+    width: 800px;
+}
+#examples-table{
+    width: 795px;
+}
+#examples-table tr{
+    height: 45px;
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    background: rgb(246,246,246);
+}
+#examples-table .table-title td{
+    line-height: 60px;
+    font-family: SimHei;
+    font-size: 16px;
+    color: black;
+    background: rgb(255, 192, 1);
+    border-radius: 5px 5px 0 0;
+    padding: 0 8px;
+}
+#examples-table .row{
+    border-bottom: 1px dashed rgb(217,217,217);
+}
+#examples-table .row.last{
+    border-bottom: 0;
+}
+#examples-table .row:hover{
+    color: #ffc001;
+}
+#examples-table .row .name{
+    width: 50%;
+}
+#examples-table .row .size{
+    text-align: right;
+    width: 30%;
+}
+#examples-table .row .download-link{
+    text-align: center;
+    width: auto;
 }

@@ -77,7 +77,7 @@
                                 <img src="{{ url_for('.static', filename=('media/profession/'+content['example']["image"])) }}">
                             </div>
                             <div class="example-title">{{ content['example']["title"] }}</div>
-                            <a href={{ content['example']["href"] }}>
+                            <a href={{ url_for('main.examples', pid=1) }}>
                                 <div class="see-more-button yellow-bk">查看更多案例</div>
                             </a>
                         </div>
