@@ -15,7 +15,7 @@ map.addOverlay(marker);						// 添加一个小圆点
 let opts = {
   width : 200,     // 信息窗口宽度
   height: 100,     // 信息窗口高度
-  title : "启信信息科技有限公司" , // 信息窗口标题
+  title : "北京启信信息技术有限公司" , // 信息窗口标题
   enableMessage:true,//设置允许信息窗发送短息
   message:"海淀黄庄地铁站旁，北京海诚公证处对面"
 };
