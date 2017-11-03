@@ -279,4 +279,16 @@
     <script type="text/javascript" src="{{ url_for('.static', filename='js/app.js') }}"></script>
 {#    <script type="text/javascript" src="{{ url_for('.static', filename='js/jquery.lazyload.min.js') }}"></script>#}
 {#    <script type="text/javascript" src="{{ url_for('.static', filename='js/app-lazyload.js') }}"></script>#}
+
+    {# 网站统计 #}
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?11b5cdc8bb01171030c54b674669e164";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="//s.union.360.cn/155353.js" async defer></script>
 {% endblock %}
