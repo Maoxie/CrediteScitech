@@ -25,7 +25,7 @@
             </a>
         </div>
         <div id="customer-file-upload-form" class="float-up">
-            <form class="form-inline" method="post" action="{{ url_for('main.upload_file') }}">
+            <form class="form-inline" method="POST" action="{{ url_for('main.upload_file') }}" enctype="multipart/form-data">
                 {{ form.hidden_tag() }}
                 <div class="form-group">
                     {{ form.customerName.label(class="text-right") }}

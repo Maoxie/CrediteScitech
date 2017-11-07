@@ -3,16 +3,18 @@ __author__ = 'maoxie'
 __date__ = '2017/9/13 21:30'
 
 from datetime import datetime
-from flask import render_template, session, redirect, url_for
+import os
+
+from flask import render_template, session, redirect, url_for, request, current_app
 from jinja2 import exceptions as JException
 from flask_wtf import Form
+from werkzeug.utils import secure_filename
 
 from . import main
 from . import init_data
 from . import forms
-#from .forms import ##TODO
+from .. import models
 from .. import db
-#from ..models import ##TODO
 
 
 @main.route('/', methods=['GET'])
@@ -79,19 +81,35 @@ def promotion(pid):
 @main.route('/upload-file', methods=['GET', 'POST'])
 def upload_file():
     form = forms.MainCustomerUploadFileForm()
-    if form.validate_on_submit():
-        customerName = form.customerName.data
-        customerPhoneNumber = form.customerPhoneNumber.data
-        customerEmail = form.customerEmail.data
-        uploadFile = form.uploadFile.data
-        # TODO: save file
-        customerInfo = {
-            'customerName': customerName,
-            'customerPhoneNumber': customerPhoneNumber,
-            'customerEmail': customerEmail
-        }
-        session['customerInfo'] = customerInfo
-        return redirect(url_for('main.index'))
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            customerName = form.customerName.data
+            customerPhoneNumber = form.customerPhoneNumber.data
+            customerEmail = form.customerEmail.data
+
+            uploadFile = form.uploadFile.data
+            filename = uploadFile.filename
+            filename_for_storage = secure_filename(str(datetime.utcnow()) + '_' + filename)
+            full_path = os.path.join(current_app.config.get('UPLOAD_FILES_PATH'), filename_for_storage)
+            uploadFile.save(full_path)
+            # add to database
+            newUpload = models.MainCustomerUploadFile(
+                customerName=customerName,
+                customerPhoneNumber=customerPhoneNumber,
+                customerEmail=customerEmail,
+                uploadFileName=filename,
+                storageFileName=filename_for_storage,
+            )
+            db.session.add(newUpload)
+            db.session.commit()
+            customerInfo = {
+                'customerName': customerName,
+                'customerPhoneNumber': customerPhoneNumber,
+                'customerEmail': customerEmail
+            }
+            session['customerInfo'] = customerInfo
+            # TODO: return a flash message to notify users
+            return redirect(url_for('main.index'))
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
 
 

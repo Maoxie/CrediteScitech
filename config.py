@@ -11,6 +11,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     CREDITE_PROJECT_URL = os.getenv('CREDITE_PROJECT_URL')
+    CUSTOMER_UPLOAD_MAX_SIZE = 50*1024*1024  # 50MB
 
     @staticmethod
     def init_app(app):
@@ -21,7 +22,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
-    UPLOAD_FILES_PATH = os.path.join(basedir, '/app/static/customer_upload')
+    UPLOAD_FILES_PATH = os.path.join(basedir, 'app', 'static', 'customer_upload')
 
 
 class ProductionConfig(Config):
