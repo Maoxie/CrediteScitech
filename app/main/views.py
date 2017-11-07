@@ -5,10 +5,11 @@ __date__ = '2017/9/13 21:30'
 from datetime import datetime
 import os
 
-from flask import render_template, session, redirect, url_for, request, current_app
+from flask import render_template, session, redirect, url_for, request, current_app, send_from_directory
 from jinja2 import exceptions as JException
 from flask_wtf import Form
 from werkzeug.utils import secure_filename
+from sqlalchemy import desc
 
 from . import main
 from . import init_data
@@ -120,3 +121,25 @@ def examples(pid):
         return render_template(template)
     except JException.TemplateNotFound, e:
         return render_template('404.html')
+
+
+@main.route('/qixinadmin', methods=['GET'])
+def admin():
+    customer_upload_files = models.MainCustomerUploadFile()
+    all_files_model = customer_upload_files.query.order_by(desc(models.MainCustomerUploadFile.updateTime)).all()
+    all_files = [{
+        'Name': file_model.customerName,
+        'PhoneNumber': file_model.customerPhoneNumber,
+        'Email': file_model.customerEmail,
+        'FileName': file_model.uploadFileName,
+        'downloadLink': url_for('main.admin_download', type='customer-uploaded-file', filename=file_model.storageFileName),
+        'uploadTime': file_model.updateTime
+    } for file_model in all_files_model]
+    return render_template('admin.html', all_files=all_files)
+
+
+@main.route('/admin-download/<string:type>/<string:filename>', methods=['GET'])
+def admin_download(type, filename):
+    if type == 'customer-uploaded-file':
+        if os.path.isfile(os.path.join(current_app.config.get('UPLOAD_FILES_PATH'), filename)):
+            return send_from_directory(current_app.config.get('UPLOAD_FILES_PATH'), filename, as_attachment=True)

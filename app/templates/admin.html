@@ -1,0 +1,57 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}启信后台{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block metas %}
+    {{ super() }}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="renderer" content="webkit" />
+
+    <meta name="keywords" content="cc"/>
+    <meta name="description" content="cc"/>
+    <link type="image/x-icon" href="{{ url_for('.static', filename='media/base/favicon.ico') }}" rel="icon"/>
+    <link href="{{ url_for('.static', filename='media/base/favicon.ico', _external=True) }}" rel="shortcut icon"/>
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>上传时间</th>
+                <th>客户姓名</th>
+                <th>联系电话</th>
+                <th>联系邮箱</th>
+                <th>文件名称</th>
+                <th>下载链接</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in all_files %}
+            <tr>
+                <td>{{ file.get('uploadTime') }}</td>
+                <td>{{ file.get('Name') }}</td>
+                <td>{{ file.get('PhoneNumber') }}</td>
+                <td>{{ file.get('Email') }}</td>
+                <td>{{ file.get('FileName') }}</td>
+                <td><a href="{{ file.get('downloadLink') }}">下载</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
