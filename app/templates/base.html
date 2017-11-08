@@ -30,6 +30,19 @@
 
 {% block navbar %}
     <div id="level-1-index" style="display: none">{% block level_1_index %}0{% endblock %}</div>
+
+    {# show flash messages #}
+    {% with messages = get_flashed_messages() %}
+        <div class="container">
+            {% for message in messages %}
+            <div class="alert alert-warning text-center"  style="margin: 10px 0; font-size: 16px; color: brown;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+    {% endwith %}
+
     <div class="container" id="header-div">
         <img id="header-logo" src="{{ url_for('.static', filename='media/base/header-logo.png') }}" alt="header logo">
         <div id="header-slogan">
@@ -41,6 +54,7 @@
             <span class="phone-number">010-81669998 | 15910981088</span>
         </div>
     </div>
+
     <div id="header-navibar" class="container-fluid" role="navigation">
         <div class="row item-container">
             <div class="col-xs-2">

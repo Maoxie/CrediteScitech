@@ -5,7 +5,7 @@ __date__ = '2017/9/13 21:30'
 from datetime import datetime
 import os
 
-from flask import render_template, session, redirect, url_for, request, current_app, send_from_directory
+from flask import render_template, session, redirect, url_for, request, current_app, send_from_directory, flash
 from jinja2 import exceptions as JException
 from flask_wtf import Form
 from werkzeug.utils import secure_filename
@@ -110,7 +110,9 @@ def upload_file():
             }
             session['customerInfo'] = customerInfo
             # TODO: return a flash message to notify users
+            flash(u'文件上传成功！')
             return redirect(url_for('main.index'))
+        flash(u'上传失败，请重试')
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
 
 
