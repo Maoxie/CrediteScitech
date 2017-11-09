@@ -109,7 +109,6 @@ def upload_file():
                 'customerEmail': customerEmail
             }
             session['customerInfo'] = customerInfo
-            # TODO: return a flash message to notify users
             flash(u'文件上传成功！')
             return redirect(url_for('main.index'))
         flash(u'上传失败，请重试')

@@ -1,0 +1,24 @@
+#profession-sub-content{
+    padding-bottom: 70px;
+}
+#profession-sub-content .in-content-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#profession-sub-content .passage{
+    width: 836px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 30px;
+    color: rgb(102, 102, 102);
+}
+#profession-sub-content .passage p{
+    white-space: normal;
+    margin-top: 20px;
+}
+#profession-sub-content .passage h2{
+    white-space: normal;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
