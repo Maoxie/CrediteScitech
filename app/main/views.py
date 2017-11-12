@@ -125,9 +125,14 @@ def examples(pid):
     tmp = [(dirpath, filenames) for dirpath, _dirnames, filenames in os.walk(folder)]
     dirpath = tmp[0][0]
     filenames = tmp[0][1]
-    example_files = [(filename.decode('gbk'),
-                      float('%.2f' % (os.path.getsize(os.path.join(dirpath, filename))/1024.0)))
-                     for filename in filenames]
+    try:
+        example_files = [(filename.decode('utf-8'),
+                          float('%.2f' % (os.path.getsize(os.path.join(dirpath, filename))/1024.0)))
+                         for filename in filenames]
+    except UnicodeDecodeError:
+        example_files = [(filename.decode('gbk'),
+                          float('%.2f' % (os.path.getsize(os.path.join(dirpath, filename)) / 1024.0)))
+                         for filename in filenames]
     url_dirpath = url_for('main.static', filename="files/examples/category-{0}".format(pid))
     try:
         return render_template(template, url_dirpath=url_dirpath, example_files=example_files)
