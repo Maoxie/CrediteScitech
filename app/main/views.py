@@ -87,30 +87,31 @@ def upload_file():
             customerName = form.customerName.data
             customerPhoneNumber = form.customerPhoneNumber.data
             customerEmail = form.customerEmail.data
-
-            uploadFile = form.uploadFile.data
-            filename = uploadFile.filename
-            filename_for_storage = secure_filename(str(datetime.utcnow()) + '_' + filename)
-            full_path = os.path.join(current_app.config.get('UPLOAD_FILES_PATH'), filename_for_storage)
-            uploadFile.save(full_path)
-            # add to database
-            newUpload = models.MainCustomerUploadFile(
-                customerName=customerName,
-                customerPhoneNumber=customerPhoneNumber,
-                customerEmail=customerEmail,
-                uploadFileName=filename,
-                storageFileName=filename_for_storage,
-            )
-            db.session.add(newUpload)
-            db.session.commit()
             customerInfo = {
                 'customerName': customerName,
                 'customerPhoneNumber': customerPhoneNumber,
                 'customerEmail': customerEmail
             }
             session['customerInfo'] = customerInfo
-            flash(u'文件上传成功！')
-            return redirect(url_for('main.index'))
+
+            uploadFile = form.uploadFile.data
+            filename = uploadFile.filename
+            if filename:
+                filename_for_storage = secure_filename(str(datetime.utcnow()) + '_' + filename)
+                full_path = os.path.join(current_app.config.get('UPLOAD_FILES_PATH'), filename_for_storage)
+                uploadFile.save(full_path)
+                # add to database
+                newUpload = models.MainCustomerUploadFile(
+                    customerName=customerName,
+                    customerPhoneNumber=customerPhoneNumber,
+                    customerEmail=customerEmail,
+                    uploadFileName=filename,
+                    storageFileName=filename_for_storage,
+                )
+                db.session.add(newUpload)
+                db.session.commit()
+                flash(u'文件上传成功！')
+                return redirect(url_for('main.index'))
         flash(u'上传失败，请重试')
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
 
