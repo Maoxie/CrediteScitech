@@ -2,6 +2,8 @@
 __author__ = 'maoxie'
 __date__ = '2017/9/13 21:27'
 
+import os
+
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap, WebCDN, ConditionalCDN, \
     BOOTSTRAP_VERSION, JQUERY_VERSION, HTML5SHIV_VERSION, RESPONDJS_VERSION
@@ -9,6 +11,8 @@ from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 from config import config
 import re
+
+APP_DIR = os.path.abspath(os.path.dirname(__file__))
 
 bootstrap = Bootstrap()
 moment = Moment()

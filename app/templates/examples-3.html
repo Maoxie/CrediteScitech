@@ -37,76 +37,15 @@
                     <div style="height: 50px;"></div>
                     <table id="examples-table">
                         <tr class="table-title"><td colspan="4">技术标书翻译案例下载</td></tr>
-                        <tr class="row">
-                            <td class="name">简历-EN.docx</td>
-                            <td class="size">15.82KB</td>
+                        {% for file in example_files %}
+                        <tr class="row{% if loop.last %} last{% endif %}">
+                            <td class="name">{{ file[0] }}</td>
+                            <td class="size">{{ file[1] }}KB</td>
                             <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/简历-EN.docx') }}">下载</a>
+                                <a href="{{ url_dirpath + '/' + file[0] }}">下载</a>
                             </td>
                         </tr>
-                        <tr class="row">
-                            <td class="name">微信营销系列之高级篇.docx</td>
-                            <td class="size">683.95KB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/微信营销系列之高级篇.docx') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row">
-                            <td class="name">【干货分享】微信公众平台营销技巧.doc</td>
-                            <td class="size">53.5KB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/【干货分享】微信公众平台营销技巧.doc') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row">
-                            <td class="name">体检2.pdf</td>
-                            <td class="size">528.1KB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/体检2.pdf') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row">
-                            <td class="name">体检2-EN.pdf</td>
-                            <td class="size">2.36MB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/体检2-EN.pdf') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row last">
-                            <td class="name">微信快速增加粉丝的7个步骤.docx</td>
-                            <td class="size">50.66KB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/微信快速增加粉丝的7个步骤.docx') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row">
-                            <td class="name">TEFL教师资格公证及认证.pdf</td>
-                            <td class="size">578.86KB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/TEFL教师资格公证及认证.pdf') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row">
-                            <td class="name">无犯罪记录证明公证及认证-EN.docx</td>
-                            <td class="size">1.22MB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/无犯罪记录证明公证及认证-EN.docx') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row">
-                            <td class="name">无犯罪记录证明公证及认证.docx</td>
-                            <td class="size">349.85KB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/无犯罪记录证明公证及认证.docx') }}">下载</a>
-                            </td>
-                        </tr>
-                        <tr class="row">
-                            <td class="name">辞职信.docx</td>
-                            <td class="size">13.29KB</td>
-                            <td class="download-link">
-                                <a href="{{ url_for('static', filename='files/examples/辞职信.docx') }}">下载</a>
-                            </td>
-                        </tr>
+                        {% endfor %}
                     </table>
                 </div>
             </td></tr>

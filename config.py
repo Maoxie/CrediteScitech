@@ -10,6 +10,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
+    STATIC_FOLDER = 'static'
     CREDITE_PROJECT_URL = os.getenv('CREDITE_PROJECT_URL')
     CUSTOMER_UPLOAD_MAX_SIZE = 50*1024*1024  # 50MB
 

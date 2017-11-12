@@ -16,6 +16,7 @@ from . import init_data
 from . import forms
 from .. import models
 from .. import db
+from .. import APP_DIR
 
 
 @main.route('/', methods=['GET'])
@@ -119,8 +120,17 @@ def upload_file():
 @main.route('/examples/<int:pid>', methods=['GET'])
 def examples(pid):
     template = 'examples-{0}.html'.format(pid)
+    folder = os.path.join(APP_DIR, current_app.config.get('STATIC_FOLDER'), 'files', 'examples', 'category-{0}'.format(pid))
+    # example_files = [(filename, os.path.getsize(os.path.join(dirpath, filename))) for dirpath, dirname, filename in os.walk(folder)]
+    tmp = [(dirpath, filenames) for dirpath, _dirnames, filenames in os.walk(folder)]
+    dirpath = tmp[0][0]
+    filenames = tmp[0][1]
+    example_files = [(filename.decode('gbk'),
+                      float('%.2f' % (os.path.getsize(os.path.join(dirpath, filename))/1024.0)))
+                     for filename in filenames]
+    url_dirpath = url_for('main.static', filename="files/examples/category-{0}".format(pid))
     try:
-        return render_template(template)
+        return render_template(template, url_dirpath=url_dirpath, example_files=example_files)
     except JException.TemplateNotFound, e:
         return render_template('404.html')
 
