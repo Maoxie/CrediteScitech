@@ -9,7 +9,9 @@ from wtforms.validators import DataRequired, Regexp, Email
 
 class MainCustomerUploadFileForm(FlaskForm):
     customerName = StringField(u'您的姓名', validators=[DataRequired()])
-    customerPhoneNumber = StringField(u'联系电话', validators=[Regexp(r'[-0-9 ]')])
-    customerEmail = StringField(u'联系邮箱', validators=[Email()])
+    # customerPhoneNumber = StringField(u'联系电话', validators=[Regexp(r'[-0-9 ]')])
+    customerPhoneNumber = StringField(u'联系电话')
+    # customerEmail = StringField(u'联系邮箱', validators=[Email()])
+    customerEmail = StringField(u'联系邮箱')
     uploadFile = FileField(u'上传文件')
     submit = SubmitField(u'提交')
