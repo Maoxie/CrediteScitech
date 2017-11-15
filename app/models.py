@@ -12,8 +12,8 @@ class MainCustomerUploadFile(db.Model):
     customerName = db.Column(db.String(20))
     customerPhoneNumber = db.Column(db.String(20), nullable=True)
     customerEmail = db.Column(db.String(50), nullable=True)
-    uploadFileName = db.Column(db.String(100))
-    storageFileName = db.Column(db.String(100))
+    uploadFileName = db.Column(db.String(256))
+    storageFileName = db.Column(db.String(256))
     # 条目的更新时间。每次更新条目的时候，本字段会自动更新时间戳
     updateTime = db.Column(db.TIMESTAMP(True), nullable=False)
     # 条目的创建时间。每次更新条目的时候，本字段不会自动更新时间戳
