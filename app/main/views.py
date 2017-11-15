@@ -145,12 +145,14 @@ def admin():
     customer_upload_files = models.MainCustomerUploadFile()
     all_files_model = customer_upload_files.query.order_by(desc(models.MainCustomerUploadFile.updateTime)).all()
     all_files = [{
+        'id': file_model.id,
         'Name': file_model.customerName,
         'PhoneNumber': file_model.customerPhoneNumber,
         'Email': file_model.customerEmail,
         'FileName': file_model.uploadFileName,
         'downloadLink': url_for('main.admin_download', type='customer-uploaded-file', filename=file_model.storageFileName),
-        'uploadTime': file_model.updateTime
+        'uploadTime': file_model.updateTime,
+        'deleteLink': url_for('main.admin_delete', type='customer-uploaded-file', id=file_model.id)
     } for file_model in all_files_model]
     return render_template('admin.html', all_files=all_files)
 
@@ -160,3 +162,19 @@ def admin_download(type, filename):
     if type == 'customer-uploaded-file':
         if os.path.isfile(os.path.join(current_app.config.get('UPLOAD_FILES_PATH'), filename)):
             return send_from_directory(current_app.config.get('UPLOAD_FILES_PATH'), filename, as_attachment=True)
+
+
+@main.route('/admin-delete/<string:type>/<int:id>', methods=['GET', 'POST'])
+def admin_delete(type, id):
+    if type == 'customer-uploaded-file':
+        upload_file = models.MainCustomerUploadFile.query.get(id)
+        if upload_file:
+            filename = upload_file.uploadFileName
+            fullpath = os.path.join(current_app.config.get('UPLOAD_FILES_PATH'), upload_file.storageFileName)
+            if os.path.isfile(fullpath):
+                os.remove(fullpath)
+            db.session.delete(upload_file)
+            db.session.commit()
+            flash(u'"{filename}"删除成功'.format(filename=filename))
+            return redirect(url_for('main.admin'))
+    return redirect(url_for('main.index'))

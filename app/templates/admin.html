@@ -26,26 +26,43 @@
 {% endblock %}
 
 {% block content %}
+    {# show flash messages #}
+    {% with messages = get_flashed_messages() %}
+        <div class="container">
+            {% for message in messages %}
+            <div class="alert alert-warning text-center"  style="margin: 10px 0; font-size: 16px; color: brown;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+    {% endwith %}
+
     <table class="table">
         <thead>
             <tr>
+                <th>id</th>
                 <th>上传时间</th>
                 <th>客户姓名</th>
                 <th>联系电话</th>
                 <th>联系邮箱</th>
                 <th>文件名称</th>
                 <th>下载链接</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             {% for file in all_files %}
             <tr>
+                <td>{{ file.get('id') }}</td>
                 <td>{{ file.get('uploadTime') }}</td>
                 <td>{{ file.get('Name') }}</td>
                 <td>{{ file.get('PhoneNumber') }}</td>
                 <td>{{ file.get('Email') }}</td>
                 <td>{{ file.get('FileName') }}</td>
                 <td><a href="{{ file.get('downloadLink') }}">下载</a></td>
+                <td><a href="{{ file.get('deleteLink') }}"><b>删除</b></a></td>
+
             </tr>
             {% endfor %}
         </tbody>
