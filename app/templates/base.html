@@ -67,7 +67,9 @@
             <div class="with-menu">
                 <div class="col-xs-2">
                     <div class="navbar-item">
-                        <div class="text-center navbar-button" data-index="2">翻译领域</div>
+                        <a href="{{ url_for('main.profession', pid=1) }}">
+                            <div class="text-center navbar-button" data-index="2">翻译领域</div>
+                        </a>
                     </div>
                 </div>
                 <div class="navbar-menu">
@@ -132,7 +134,9 @@
             <div class="with-menu">
                 <div class="col-xs-2">
                     <div class="navbar-item">
-                        <div class="text-center navbar-button" data-index="3">服务产品</div>
+                        <a href="{{ url_for('main.production', pid=1) }}">
+                            <div class="text-center navbar-button" data-index="3">服务产品</div>
+                        </a>
                     </div>
                 </div>
                 <div class="navbar-menu">
@@ -204,7 +208,9 @@
             <div class="with-menu">
                 <div class="col-xs-2">
                     <div class="navbar-item">
-                        <div class="text-center navbar-button" data-index="5">案例简介</div>
+                        <a href="{{ url_for('main.examples', pid=1) }}">
+                            <div class="text-center navbar-button" data-index="5">案例简介</div>
+                        </a>
                     </div>
                 </div>
                 <div class="navbar-menu">

@@ -5,6 +5,11 @@ __date__ = '2017/9/23 13:33'
 professions = [
     # 1
     {
+        "page_infos": {
+            "title": u"医学医药翻译_医疗器械翻译_生物工程翻译_北京启信信息技术有限公司",
+            "keywords": u"医学翻译,医药翻译,生物翻译",
+            "description": u"启信翻译是—家专业医学翻译公司，有丰富的医学翻译经验和强大的医学背景,合作的医学企业机构超万家,提供医学报告翻译、医学手册翻译、医学论文翻译、医疗器械说明书翻译、医学材料翻译等专业翻译服务，服务热线 010 81669998",
+        },
         "name": u"医学医药",
         "english_name": "MEDICAL AND MEDICINE",
         "introduction": u"我们的翻译团队不仅有英语专业译者，而且有具备医学、药学、生物学学术背景的专业人才，" +
@@ -53,11 +58,16 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     },
     # 2
     {
+        "page_infos": {
+            "title": u"汽车机械翻译_机械电子翻译-机械图纸翻译_北京启信信息技术有限公司",
+            "keywords": u"机械翻译公司, 机械说明书翻译, 机械电子翻译",
+            "description": u"启信翻译提供机械翻译，工程机械翻译，机械制造翻译，机械电子翻译，机械图纸等专业翻译服务，服务热线 010 81669998",
+        },
         "name": u"机械电子",
         "english_name": "MECHANICAL & ELECTRONICS",
         "introduction": u"启信科技机械电子翻译组特聘清华、北大等著名院校的高材生担当英译中科技文献的初译以及英语论文的专业术语审校，" +
@@ -106,11 +116,16 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     },
     # 3
     {
+        "page_infos": {
+            "title": u"应用数学翻译_力学工程翻译_专业物理数学翻译_北京启信信息技术有限公司",
+            "keywords": u"统计数学翻译，工程力学翻译，电动力学翻译",
+            "description": u"启信翻译是—家专业物量数学翻译公司，提供优质专业级的物理学、物理工程，应用数学，统计数学，工程力学，热力学电，动力学等专业翻译服务，服务热线 010 81669998",
+        },
         "name": u"数学物理",
         "english_name": "MATHEMATICS AND PHYSICS",
         "introduction": u"物理、数学属于两大基础学科，专业术语较多，涉及领域广泛，专业概念艰深，给翻译带来了很大难度。" +
@@ -158,11 +173,16 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     },
     # 4
     {
+        "page_infos": {
+            "title": u"化工化学翻译_化工翻译公司_专业化工翻译服务_北京启信信息技术有限公司",
+            "keywords": u"化工翻译,石油化工翻译,化工文献翻译",
+            "description": u"启信翻译是—家专业化工化学翻译公司，提供机械化工翻译，石油化工翻译，煤化工翻译，化工填料翻译，化工网站翻译 ，化工文献翻译， 日用化工翻译等专业翻译服务，服务热线 010 81669998",
+        },
         "name": u"化学化工",
         "english_name": "CHEMISTRY",
         "introduction": u"我们的翻译团队不仅有英语专业译者，而且有具备化学化工专业学术背景的专业人才，" +
@@ -210,11 +230,16 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     },
     # 5
     {
+        "page_infos": {
+            "title": u"生命科学翻译_生物工程翻译_ 生物科技翻译_北京启信信息技术有限公司",
+            "keywords": u"生命科学论文翻译,生物工程翻译,基因工程翻译",
+            "description": u"启信翻译是—家专业生命科学翻译公司，擅长生命科学翻译，生物技术翻译，生物制药，生命科学论文翻译，生命科学文献翻译，生物工程翻译专业翻译服务，服务热线 010 81669998",
+        },
         "name": u"生命科学",
         "english_name": "BIOLOGY SCIENCE",
         "introduction": u"生命科学是一项非常专业的学科，也是当今非常热门的学科之一，尤其基因科学和蛋白质科学是当今科学界的最前沿阵地，" +
@@ -263,11 +288,16 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     },
     # 6
     {
+        "page_infos": {
+            "title": u"核科学翻译_核技术翻译_核能翻译_北京启信信息技术有限公司",
+            "keywords": u"核科学论文翻译，核能核电文献翻译，核仪器翻译",
+            "description": u"启信翻译是—家专业能源翻译公司，提供放射性药物翻译，核科学论文翻译，核能核电文献翻译，核电能源翻译，核电核能翻译，核仪器翻译，等专业翻译服务，服务热线 010 81669998",
+        },
         "name": u"核能核电",
         "english_name": "NUCLEAR ENGINEERING AND TECHNOLOGY",
         "introduction": u"核科学与核技术是一个相对较窄的学科领域，但是它不仅能够产生巨大的经济效益，还关系着国防安全。" +
@@ -316,11 +346,16 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     },
     # 7
     {
+        "page_infos": {
+            "title": u"技术翻译_科学技术翻译_专业技术翻译_北京启信信息技术有限公司",
+            "keywords": u"科学翻译,技术翻译,工程翻译,工程技术翻译",
+            "description": u"启信翻译—家专业信息技术翻译公司，提供技术翻译，技术档案翻译，技术文档翻译，技术资料翻译等，涉及IT行业、电子行业、通讯行业、机械行业、汽车行业、建筑行业、钢铁行业、能源行业、化工行业、医药行业、法律行业、财经行业、管理咨询、专利科技、教育行业、旅游行业等行业的技术翻译，服务热线 010 81669998",
+        },
         "name": u"信息技术",
         "english_name": "INFORMATION TECHNOLOGY",
         "introduction": u"信息技术行业是当今最具活力的行业之一，信息技术的快速发展也给世界语言库带来了大量新术语，" +
@@ -369,11 +404,16 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     },
     # 8
     {
+        "page_infos": {
+            "title": u"工程翻译_环境工程翻译_建筑工程翻译_北京启信信息技术有限公司",
+            "keywords": u"环境工程翻译，土木工程翻译，机械工程翻译",
+            "description": u"启信翻译—家专业工程翻译公司，提供机械工程翻译和土木工程翻译，建筑工程翻译、生物工程翻译、化工工程翻译、电气工程翻译，电力工程翻译，水利工程翻译，装饰工程翻译等专业翻译服务，服务热线 010 81669998",
+        },
         "name": u"环境工程",
         "english_name": "ENVIRONMENTAL ENGINEERING",
         "introduction": u"环境与人类生存息息相关，中国日益严重的环境污染形势已经成为发展的重担，也使得环境工程成为热门学科，" +
@@ -421,7 +461,7 @@ professions = [
         "example": {
             "image": "example-1.jpg",
             "title": u"题为《细胞质RNA与基因检测》的英语论文翻译",
-            "href": ""
+            "href": "/examples/1"
         }
     }
 ]

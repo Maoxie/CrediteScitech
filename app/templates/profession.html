@@ -1,4 +1,12 @@
 {% extends "base.html" %}
+{% block title %}{{ content['page_infos'].get('title') }}{% endblock %}
+{% block metas %}
+    {{ super() }}
+
+    <meta name="keywords" content="{{ content['page_infos'].get('keywords') }}"/>
+    <meta name="description" content="{{ content['page_infos'].get('description') }}"/>
+
+{% endblock %}
 
 {% block level_1_index %}2{% endblock %}
 
@@ -77,7 +85,7 @@
                                 <img src="{{ url_for('.static', filename=('media/profession/'+content['example']["image"])) }}">
                             </div>
                             <div class="example-title">{{ content['example']["title"] }}</div>
-                            <a href={{ url_for('main.examples', pid=1) }}>
+                            <a href={{ content['example']["href"] }}>
                                 <div class="see-more-button yellow-bk">查看更多案例</div>
                             </a>
                         </div>
