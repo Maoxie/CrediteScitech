@@ -1,3 +1,4 @@
-supervisorctl -c supervisor.conf CrediteScitech stop
+supervisorctl -c supervisor.conf stop CrediteScitech
 supervisorctl -c supervisor.conf reload
-supervisorctl -c supervisor.conf CrediteScitech start
+supervisorctl -c supervisor.conf start CrediteScitech
+supervisorctl -c supervisor.conf status
