@@ -51,7 +51,9 @@
                         <img src="{{ url_for('static', filename='media/other-pics/siteFormFUDescIcons.png') }}">文件大小不超过50M<span class="red">*</span>
                     </div>
                 </div>
-                {{ form.submit(class="btn btn-default") }}
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-default") }}
+                </div>
             </form>
         </div>
     </div>
