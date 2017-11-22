@@ -1,4 +1,7 @@
 {% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}用户登陆{% endblock %}
 
 {% block content %}
 
@@ -14,7 +17,9 @@
         </div>
     {% endwith %}
 
-    {% import "bootstrap/wtf.html" as wtf %}
-    {{ wtf.quick_form(form) }}
+    <div class="container">
+        <h1 class="text-center">用户登录</h1>
+        {{ wtf.quick_form(form) }}
+    </div>
 
 {% endblock %}
