@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+
+    {# show flash messages #}
+    {% with messages = get_flashed_messages() %}
+        <div class="container">
+            {% for message in messages %}
+            <div class="alert alert-warning text-center"  style="margin: 10px 0; font-size: 16px; color: brown;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+    {% endwith %}
+
+    {% import "bootstrap/wtf.html" as wtf %}
+    {{ wtf.quick_form(form) }}
+
+{% endblock %}

@@ -9,6 +9,7 @@ from flask_bootstrap import Bootstrap, WebCDN, ConditionalCDN, \
     BOOTSTRAP_VERSION, JQUERY_VERSION, HTML5SHIV_VERSION, RESPONDJS_VERSION
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 from config import config
 import re
 
@@ -17,6 +18,9 @@ APP_DIR = os.path.abspath(os.path.dirname(__file__))
 bootstrap = Bootstrap()
 moment = Moment()
 db = SQLAlchemy()
+login_manager = LoginManager()
+login_manager.session_protection = 'strong'
+login_manager.login_view = 'auth.login'
 
 
 def change_cdn_domestic(tar_app):
@@ -45,6 +49,7 @@ def create_app(config_name):
     bootstrap.init_app(app)
     moment.init_app(app)
     db.init_app(app)
+    login_manager.init_app(app)
 
     # bootstrap使用国内CDN
     change_cdn_domestic(app)
@@ -72,5 +77,7 @@ def create_app(config_name):
     # 注册蓝本
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
+    from .auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint, url_prefix='/auth')
 
     return app

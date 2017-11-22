@@ -5,7 +5,7 @@ __date__ = '2017/9/13 21:28'
 
 import os
 from app import create_app, db
-# from app.models import ##TODO
+from app.models import User, Role, MainCustomerUploadFile
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
 
