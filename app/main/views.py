@@ -10,6 +10,7 @@ from jinja2 import exceptions as JException
 from flask_wtf import Form
 from werkzeug.utils import secure_filename
 from sqlalchemy import desc
+from flask_login import login_required
 
 from . import main
 from . import init_data
@@ -140,7 +141,8 @@ def examples(pid):
         return render_template('404.html')
 
 
-@main.route('/qixinadmin', methods=['GET'])
+@main.route('/qixinadmin', methods=['GET', 'POST'])
+@login_required
 def admin():
     customer_upload_files = models.MainCustomerUploadFile()
     all_files_model = customer_upload_files.query.order_by(desc(models.MainCustomerUploadFile.updateTime)).all()
@@ -154,10 +156,11 @@ def admin():
         'uploadTime': file_model.updateTime,
         'deleteLink': url_for('main.admin_delete', type='customer-uploaded-file', id=file_model.id)
     } for file_model in all_files_model]
-    return render_template('admin.html', all_files=all_files)
+    return render_template('admin/admin.html', all_files=all_files)
 
 
 @main.route('/admin-download/<string:type>/<string:filename>', methods=['GET'])
+@login_required
 def admin_download(type, filename):
     if type == 'customer-uploaded-file':
         if os.path.isfile(os.path.join(current_app.config.get('UPLOAD_FILES_PATH'), filename)):
@@ -165,6 +168,7 @@ def admin_download(type, filename):
 
 
 @main.route('/admin-delete/<string:type>/<int:id>', methods=['GET', 'POST'])
+@login_required
 def admin_delete(type, id):
     if type == 'customer-uploaded-file':
         upload_file = models.MainCustomerUploadFile.query.get(id)

@@ -5,6 +5,7 @@ __date__ = '2017/9/13 21:31'
 from app import db
 from sqlalchemy.sql import func
 from flask_login import UserMixin
+from . import login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
@@ -36,7 +37,18 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
+    email = db.Column(db.String(64))
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+
+    def __init__(self, username, email, password, role):
+        super(User, self).__init__()
+        self.username = username
+        self.email = email
+        self.password = password
+        if role is None:
+            self.role_id = Role.query.filter_by(defualt=True).first().id
+        else:
+            self.role_id = Role.query.filter_by(name=role).first().id
 
     @property
     def password(self):
@@ -57,6 +69,29 @@ class Role(db.Model):
     __tablename__ = 'roles'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
+    default = db.Column(db.Boolean, default=False, index=True)
+    permissions = db.Column(db.Integer)
+    users = db.relationship('User', backref='role', lazy='dynamic')
+
+    @staticmethod
+    def insert_roles():
+        roles = {
+            'User': (0x00, True),
+            'Administrator': (0xff, False)  # 具有全部权限
+        }
+        for r in roles:
+            role = Role.query.filter_by(name=r).first()
+            if role is None:
+                role = Role(name=r)
+            role.permissions = roles[r][0]
+            role.default = roles[r][1]
+            db.session.add(role)
+        db.session.commit()
 
     def __repr__(self):
         return '<Role {0}>'.format(self.name)
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))

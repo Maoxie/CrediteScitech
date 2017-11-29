@@ -26,6 +26,14 @@
 {% endblock %}
 
 {% block content %}
+    <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('auth.logout') }}" style="margin: 0 5px;">登出</a></li>
+        {% else %}
+        <li><a href="{{ url_for('auth.login') }}" style="margin: 0 5px;">登录</a></li>
+        {% endif %}
+    </ul>
+
     {# show flash messages #}
     {% with messages = get_flashed_messages() %}
         <div class="container">
@@ -38,35 +46,9 @@
         </div>
     {% endwith %}
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>上传时间</th>
-                <th>客户姓名</th>
-                <th>联系电话</th>
-                <th>联系邮箱</th>
-                <th>文件名称</th>
-                <th>下载链接</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for file in all_files %}
-            <tr>
-                <td>{{ file.get('id') }}</td>
-                <td>{{ file.get('uploadTime') }}</td>
-                <td>{{ file.get('Name') }}</td>
-                <td>{{ file.get('PhoneNumber') }}</td>
-                <td>{{ file.get('Email') }}</td>
-                <td>{{ file.get('FileName') }}</td>
-                <td><a href="{{ file.get('downloadLink') }}">下载</a></td>
-                <td><a href="{{ file.get('deleteLink') }}"><b>删除</b></a></td>
+    {% block detals %}
+    {% endblock %}
 
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
 {% endblock %}
 
 {% block scripts %}
