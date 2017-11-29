@@ -59,7 +59,7 @@ p{ margin: 0px; }
 
 #header-div{
     position: relative;
-    height: 81px;
+    height: 61px;
 }
 #header-logo{
     position: absolute;
@@ -72,7 +72,7 @@ p{ margin: 0px; }
     position: absolute;
     width: 236px;
     height: 56px;
-    left: 255px;
+    left: 265px;
     bottom: 5px;
 }.slogan{
     font-family: STXingkai, SimSun;
@@ -91,7 +91,7 @@ p{ margin: 0px; }
     left: -53px;
     bottom: 0px;
     height: 47px;
-    font-size: 47px;
+    font-size: 50px;
     color: rgba(75,75,75,1);
 }
 #header-phone .phone-number{
