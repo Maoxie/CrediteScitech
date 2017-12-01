@@ -18,6 +18,7 @@ from . import forms
 from .. import models
 from .. import db
 from .. import APP_DIR
+from app.helper.mail import send_mail
 
 
 @main.route('/', methods=['GET'])
@@ -113,6 +114,11 @@ def upload_file():
                 db.session.add(newUpload)
                 db.session.commit()
                 flash(u'文件上传成功！')
+                customerInfo.setdefault('uploadTime', str(datetime.now()))
+                customerInfo.setdefault('uploadFileName', filename)
+                to = db.session.query(models.User.email).join(models.Role).filter(models.Role.name == 'Administrator').all()
+                to = [x[0] for x in to]
+                send_mail(to, u'新上传文件', 'new_upload', **customerInfo)
                 return redirect(url_for('main.index'))
         flash(u'上传失败，请重试')
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))

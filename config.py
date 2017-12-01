@@ -13,6 +13,14 @@ class Config:
     STATIC_FOLDER = 'static'
     CREDITE_PROJECT_URL = os.getenv('CREDITE_PROJECT_URL')
     CUSTOMER_UPLOAD_MAX_SIZE = 50*1024*1024  # 50MB
+    # flask-mail
+    MAIL_SERVER = os.getenv('MAIL_SERVER')
+    MAIL_PORT = int(os.getenv('MAIL_PORT'))
+    MAIL_USE_TLS = (os.getenv('MAIL_USE_TLS').upper() == 'TRUE')
+    MAIL_USE_SSL = (os.getenv('MAIL_USE_SSL').upper() == 'TRUE')
+    MAIL_USERNAME = os.getenv('MAIL_USERNAME')
+    MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
+
 
     @staticmethod
     def init_app(app):

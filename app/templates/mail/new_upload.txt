@@ -1,0 +1,7 @@
+有新上传文件，请到后台(qixin-trans.com/qixinAdmin)查看。
+------------------------
+上传时间：{{ uploadTime }}
+客户姓名：{{ customerName }}
+联系电话：{{ customerPhoneNumber }}
+联系邮箱：{{ customerEmail }}
+文件名称：{{ uploadFileName }}
