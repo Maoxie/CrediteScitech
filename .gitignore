@@ -5,6 +5,7 @@ venv/
 static_file_list.txt
 app/static/customer_upload/
 app/static/files/
+list_all_static.py
 # Windows:
 Thumbs.db
 ehthumbs.db

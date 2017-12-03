@@ -8,3 +8,26 @@ Using:
 - jQuery
 - Gunicorn
 - Supervior
+
+## Environment variables required
+Set them before run this project:
+
+`SECRET_KEY`
+
+`DATABASE_URL`
+
+`FLASK_CONFIG`
+
+`CREDITE_UPLOAD_FILES_PATH`
+
+`MAIL_SERVER`
+
+`MAIL_PORT`
+
+`MAIL_USE_TLS`
+
+`MAIL_USE_SSL`
+
+`MAIL_USERNAME`
+
+`MAIL_PASSWORD`
