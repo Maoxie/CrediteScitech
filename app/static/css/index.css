@@ -139,7 +139,7 @@
     line-height: 33px;
 }
 #index-content-1{
-    height: 743px;
+    height: 100%;
     background: url('../media/index/in-index-bk-1.jpg') center;
 }
 #index-content-1 .content-inner{
