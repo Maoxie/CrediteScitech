@@ -6,6 +6,7 @@ static_file_list.txt
 app/static/customer_upload/
 app/static/files/
 list_all_static.py
+migrations
 # Windows:
 Thumbs.db
 ehthumbs.db
