@@ -118,7 +118,7 @@ def upload_file():
                 customerInfo.setdefault('uploadFileName', filename)
                 to = db.session.query(models.User.email).join(models.Role).filter(models.Role.name == 'Administrator').all()
                 to = [x[0] for x in to]
-                send_mail(to, u'新上传文件', 'new_upload', **customerInfo)
+                send_mail(to, u'新上传文件', 'mail/new_upload', **customerInfo)
                 return redirect(url_for('main.index'))
         flash(u'上传失败，请重试')
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))

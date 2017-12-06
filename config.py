@@ -19,7 +19,9 @@ class Config:
     MAIL_USE_SSL = (os.getenv('MAIL_USE_SSL').upper() == 'TRUE')
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-
+    # redis
+    CELERY_BROKER_URL = 'redis://localhost:6379/0'
+    CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
     @staticmethod
     def init_app(app):
@@ -30,7 +32,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') # or \
                               # 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
-    UPLOAD_FILES_PATH = os.path.join(basedir, 'app', 'static', 'customer_upload')
+    UPLOAD_FILES_PATH = os.getenv('CREDITE_UPLOAD_FILES_PATH')
 
 
 class ProductionConfig(Config):
