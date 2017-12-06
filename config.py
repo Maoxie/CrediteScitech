@@ -19,10 +19,17 @@ class Config:
     MAIL_USE_SSL = (os.getenv('MAIL_USE_SSL').upper() == 'TRUE')
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
-    # redis
+    # celery with redis
     CELERY_BROKER_URL = 'redis://localhost:6379/0'
     CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-
+    # flask_cache with redis
+    CACHE_REDIS = {
+        "CACHE_TYPE": "redis",
+        "CACHE_REDIS_HOST": "127.0.0.1",
+        "CACHE_REDIS_PORT": 6379,
+        "CACHE_REDIS_DB": 1,
+        "CACHE_REDIS_PASSWORD": "",
+    }
     @staticmethod
     def init_app(app):
         pass

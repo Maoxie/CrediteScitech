@@ -18,16 +18,19 @@ from . import forms
 from .. import models
 from .. import db
 from .. import APP_DIR
+from app import cache
 from app.helper.mail import send_mail
 
 
 @main.route('/', methods=['GET'])
+@cache.cached(timeout=60*5)
 def index():
     form = forms.MainCustomerUploadFileForm()
     return render_template('index.html', form=form, customerInfo=session.get('customerInfo'))
 
 
 @main.route('/profession-sub/<int:pid>/<int:subpid>', methods=['GET'])
+@cache.cached(timeout=60*5)
 def profession_sub(pid, subpid):
     template = 'profession-sub/profession-{pid}-sub/profession-{pid}-{subpid}.html'.format(pid=pid, subpid=subpid)
     try:
@@ -37,6 +40,7 @@ def profession_sub(pid, subpid):
 
 
 @main.route('/profession/<int:pid>', methods=['GET'])
+@cache.cached(timeout=60*5)
 def profession(pid):
     # pid starts from 1
     try:
@@ -51,6 +55,7 @@ def profession(pid):
 
 
 @main.route('/production/<int:pid>', methods=['GET'])
+@cache.cached(timeout=60*5)
 def production(pid):
     # pid ranges from 1 to 8
     if pid < 1 or 8 < pid:
@@ -63,17 +68,20 @@ def production(pid):
 
 
 @main.route('/qc', methods=['GET'])
+@cache.cached(timeout=60*5)
 def qc():
     return render_template('qc.html')
 
 
 @main.route('/about', methods=['GET'])
+@cache.cached(timeout=60*5)
 def about():
     form = forms.MainCustomerUploadFileForm()
     return render_template('about-us.html', form=form, customerInfo=session.get('customerInfo'))
 
 
 @main.route('/promotion/<int:pid>', methods=['GET'])
+@cache.cached(timeout=60*5)
 def promotion(pid):
     template = 'promotion/promotion-{0}.html'.format(pid)
     try:
@@ -125,6 +133,7 @@ def upload_file():
 
 
 @main.route('/examples/<int:pid>', methods=['GET'])
+@cache.cached(timeout=60*5)
 def examples(pid):
     template = 'examples-{0}.html'.format(pid)
     folder = os.path.join(APP_DIR, current_app.config.get('STATIC_FOLDER'), 'files', 'examples', 'category-{0}'.format(pid))

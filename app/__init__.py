@@ -12,6 +12,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_mail import Mail
 from celery import Celery
+from flask_cache import Cache
 from config import config
 import re
 
@@ -21,6 +22,7 @@ bootstrap = Bootstrap()
 moment = Moment()
 db = SQLAlchemy()
 mail = Mail()
+cache = Cache(config=config['default'].CACHE_REDIS)
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
@@ -56,6 +58,7 @@ def create_app(config_name):
     db.init_app(app)
     login_manager.init_app(app)
     mail.init_app(app)
+    cache.init_app(app)
 
     celery.conf.update(app.config)
 
