@@ -8,6 +8,8 @@ Using:
 - jQuery
 - Gunicorn
 - Supervior
+- Celery
+- Redis
 
 ## Environment variables required
 Set them before run this project:
