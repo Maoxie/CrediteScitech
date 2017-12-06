@@ -105,9 +105,9 @@ p{ margin: 0px; }
 }
 #header-navibar .item-container{
     position: relative;
-    width: 614px;
+    width: 800px;
     height: 100%;
-    font-size: 16px;
+    font-size: 18px;
     color: #ffc001;
     margin-left: auto;
     margin-right: auto;
@@ -117,7 +117,7 @@ p{ margin: 0px; }
     cursor: default;
 }
 #header-navibar .navbar-button{
-    width: 84px;
+    width: 132px;
     height: 39px;
     background-color: #2b2b2b;
     line-height: 39px;
@@ -131,11 +131,11 @@ p{ margin: 0px; }
     display: none;
     position: absolute;
     top: 39px;
-    left: -200px;
+    left: -100px;
     height: 300px;
     width: 1000px;
     z-index: 100;
-    background-color: #222222;
+    background-color: #2b2b2b;
 }
 #header-navibar .navbar-menu .row{
     width: 100%;

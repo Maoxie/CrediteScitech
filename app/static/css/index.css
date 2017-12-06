@@ -42,16 +42,16 @@
 #carousel .carousel-picture.pic-1 .img1{
     position: absolute;
     top: 195px;
-    left: 181px;
-    width: 860px;
-    height: 99px;
+    left: 176px;
+    width: 790px;
+    height: 110px;
 }
 #carousel .carousel-picture.pic-2 .img1{
     position: absolute;
     top: 119px;
     left: 217px;
-    width: 767px;
-    height: 133px;
+    width: 790px;
+    height: 110px;
 }
 #carousel .carousel-picture.pic-2 .p1{
     position: absolute;
@@ -478,10 +478,10 @@
     margin-right: 10px;
 }
 #org-logos{
-    height: 124px;
-	left: auto;
-    right: auto;
+    center;
+	width: 1360px;
+	
 }
 #org-logos .org-logos{
-    margin-top: 27px;
+    margin-top: 37px;
 }
